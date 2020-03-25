@@ -1,0 +1,2674 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200325154907
+Nombre de usuario: DESKTOP-SOUHA69\jeffe
+Usuario RunAs: DESKTOP-SOUHA69\jeffe
+Nombre de la configuración: 
+Máquina: DESKTOP-SOUHA69 (Microsoft Windows NT 10.0.17134.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 8852
+PSVersion: 5.1.17134.858
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.858
+BuildVersion: 10.0.17134.858
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\jeffe\OneDrive\Documentos\PowerShell_transcript.DESKTOP-SOUHA69.+RZHkw7O.20200325154907.txt
+PS C:\WINDOWS\system32> Get-Process | ft -Property name, Id, Responding -Wrap
+
+Name                     Id Responding
+----                     -- ----------
+ApplicationFrameHost   8064       True
+AppVShNotify           8264       True
+audiodg                8636       True
+CAudioFilterAgent64    4772       True
+chrome                  960       True
+chrome                 2088       True
+chrome                 2292       True
+chrome                 2712       True
+chrome                 5516       True
+chrome                 6660       True
+chrome                 6764       True
+chrome                 7108       True
+chrome                 8744       True
+chrome                 8900       True
+chrome                 9404       True
+chrome                 9512       True
+chrome                 9752       True
+chrome                11156       True
+chrome                11656       True
+chrome                12052       True
+conhost                3184       True
+csrss                   564       True
+csrss                  4684       True
+ctfmon                11944       True
+CxAudMsg64             3528       True
+dasHost                2188       True
+dllhost                3720       True
+dllhost                4576       True
+dllhost               11028       True
+dwm                   10800       True
+ETDCtrl               12132       True
+ETDCtrlHelper          3056       True
+ETDIntelligent         6172       True
+ETDService             3352       True
+EvtEng                 3616       True
+explorer                884       True
+fontdrvhost            1000       True
+fontdrvhost            4440       True
+GoogleCrashHandler     9940       True
+GoogleCrashHandler64   4892       True
+IAStorDataMgrSvc       7364       True
+Idle                      0       True
+igfxCUIService         1756       True
+igfxEM                 6432       True
+igfxHK                10364       True
+lsass                   812       True
+MsMpEng                1636       True
+NisSrv                11812       True
+OfficeClickToRun       4544       True
+powershell_ise         8852       True
+PresentationFontCache  6344       True
+Registry                 96       True
+RegSrvc                3608       True
+rundll32               1368       True
+RuntimeBroker          1108       True
+RuntimeBroker          3888       True
+RuntimeBroker          6212       True
+SASrv                  3336       True
+SearchUI              10932       True
+SecurityHealthService  3512       True
+sedsvc                 7900       True
+services                796       True
+SettingSyncHost        7704       True
+SgrmBroker             7984       True
+ShellExperienceHost    6604       True
+sihost                10244       True
+smartscreen            2348       True
+smss                    388       True
+spoolsv                 876       True
+svchost                 472       True
+svchost                 540       True
+svchost                 660       True
+svchost                 736       True
+svchost                 936       True
+svchost                 964       True
+svchost                1136       True
+svchost                1308       True
+svchost                1312       True
+svchost                1344       True
+svchost                1380       True
+svchost                1396       True
+svchost                1408       True
+svchost                1420       True
+svchost                1428       True
+svchost                1476       True
+svchost                1560       True
+svchost                1648       True
+svchost                1664       True
+svchost                1836       True
+svchost                1932       True
+svchost                1940       True
+svchost                1944       True
+svchost                1960       True
+svchost                2020       True
+svchost                2032       True
+svchost                2120       True
+svchost                2196       True
+svchost                2212       True
+svchost                2252       True
+svchost                2308       True
+svchost                2332       True
+svchost                2416       True
+svchost                2436       True
+svchost                2504       True
+svchost                2648       True
+svchost                2652       True
+svchost                2664       True
+svchost                2776       True
+svchost                2848       True
+svchost                3032       True
+svchost                3084       True
+svchost                3360       True
+svchost                3368       True
+svchost                3376       True
+svchost                3384       True
+svchost                3396       True
+svchost                3404       True
+svchost                3416       True
+svchost                3424       True
+svchost                3632       True
+svchost                3668       True
+svchost                3924       True
+svchost                3992       True
+svchost                5344       True
+svchost                5528       True
+svchost                5664       True
+svchost                5724       True
+svchost                5796       True
+svchost                5976       True
+svchost                5984       True
+svchost                6100       True
+svchost                6352       True
+svchost                7044       True
+svchost                7068       True
+svchost                7236       True
+svchost                7448       True
+svchost                7716       True
+svchost                8020       True
+svchost                8184       True
+svchost                8984       True
+svchost                9416       True
+svchost               11100       True
+svchost               11144       True
+svchost               11172       True
+svchost               11348       True
+System                    4       True
+taskhostw              9556       True
+unsecapp               4968       True
+wininit                 668       True
+winlogon               8788       True
+WINWORD                3120       True
+wlanext                3152       True
+WmiPrvSE               1776       True
+WmiPrvSE               7588       True
+ZeroConfigService      3624       True
+
+
+PS C:\WINDOWS\system32> Get-Process | ft -Property name, Id, @{n='MemoriaV';e={$_.VM / 1MB -as [int]}}, @{n='memoriaFisica';e={$_.MP / 1MB -as [int]}} -Wrap
+
+Name                     Id MemoriaV memoriaFisica
+----                     -- -------- -------------
+ApplicationFrameHost   8064  2101441             0
+AppVShNotify           8264     4188             0
+CAudioFilterAgent64    4772     4197             0
+chrome                  960  2101385             0
+chrome                 2088  2105755             0
+chrome                 2292  2110029             0
+chrome                 2712  2101653             0
+chrome                 5516  2105771             0
+chrome                 6660  2105741             0
+chrome                 6764  2101390             0
+chrome                 7108  2105782             0
+chrome                 8744  2105805             0
+chrome                 8900  2105740             0
+chrome                 9404  2105700             0
+chrome                 9512  2101572             0
+chrome                 9752  2105920             0
+chrome                10592  2105692             0
+chrome                11156  2109985             0
+chrome                11656  2135034             0
+chrome                12052  2101708             0
+conhost                3184  2101344             0
+csrss                   564  2101338             0
+csrss                  4684  2101365             0
+ctfmon                11944  2101364             0
+CxAudMsg64             3528     4200             0
+dasHost                2188  2101342             0
+dllhost                3720  2101396             0
+dllhost                4576  2101374             0
+dllhost               11028  2101336             0
+dwm                   10800  2101554             0
+ETDCtrl               12132     4270             0
+ETDCtrlHelper          3056     4230             0
+ETDIntelligent         6172     4223             0
+ETDService             3352     4159             0
+EvtEng                 3616     4240             0
+explorer                884  2101975             0
+fontdrvhost            1000  2101341             0
+fontdrvhost            4440  2101354             0
+GoogleCrashHandler     9940       64             0
+GoogleCrashHandler64   4892     4194             0
+IAStorDataMgrSvc       7364      234             0
+Idle                      0        0             0
+igfxCUIService         1756     4200             0
+igfxEM                 6432     4238             0
+igfxHK                10364     4193             0
+lsass                   812  2101336             0
+MsMpEng                1636  2101834             0
+NisSrv                11812  2101363             0
+OfficeClickToRun       4544  2101574             0
+powershell_ise         8852     5140             0
+PresentationFontCache  6344     4665             0
+Registry                 96      128             0
+RegSrvc                3608     4207             0
+rundll32               1368  2101340             0
+RuntimeBroker          1108  2101403             0
+RuntimeBroker          3888  2101474             0
+RuntimeBroker          6212  2101388             0
+SASrv                  3336       34             0
+SearchUI              10932  2134925             0
+SecurityHealthService  3512  2101363             0
+sedsvc                 7900  2101359             0
+services                796  2101312             0
+SettingSyncHost        7704  2101428             0
+SgrmBroker             7984  2101300             0
+ShellExperienceHost    6604  2101671             0
+sihost                10244  2101427             0
+smartscreen            2348  2134690             0
+smss                    388  2101287             0
+SnippingTool           1124  2101445             0
+spoolsv                 876  2101356             0
+svchost                 472  2101339             0
+svchost                 540  2101327             0
+svchost                 660  2101362             0
+svchost                 736  2101316             0
+svchost                 936  2101305             0
+svchost                 964  2101415             0
+svchost                1136  2101325             0
+svchost                1308  2101396             0
+svchost                1312  2101321             0
+svchost                1344  2101362             0
+svchost                1380  2101337             0
+svchost                1396  2101324             0
+svchost                1408  2101330             0
+svchost                1420  2101368             0
+svchost                1428  2101330             0
+svchost                1476  2101368             0
+svchost                1560  2101355             0
+svchost                1648  2101329             0
+svchost                1664  2101332             0
+svchost                1836  2101318             0
+svchost                1932  2101329             0
+svchost                1940  2101320             0
+svchost                1944  2101376             0
+svchost                1960  2101320             0
+svchost                2020  2101320             0
+svchost                2032  2101333             0
+svchost                2120  2101320             0
+svchost                2196  2101781             0
+svchost                2212  2101355             0
+svchost                2252  2101340             0
+svchost                2308  2101342             0
+svchost                2332  2101341             0
+svchost                2416  2101338             0
+svchost                2436  2101329             0
+svchost                2504  2101337             0
+svchost                2648  2101334             0
+svchost                2652  2101349             0
+svchost                2664  2101317             0
+svchost                2776  2101343             0
+svchost                2848  2101348             0
+svchost                3032  2101385             0
+svchost                3084  2101326             0
+svchost                3360  2101373             0
+svchost                3368  2101493             0
+svchost                3376  2101326             0
+svchost                3384  2101351             0
+svchost                3396  2101432             0
+svchost                3404  2101337             0
+svchost                3416  2101319             0
+svchost                3424  2101313             0
+svchost                3632  2101330             0
+svchost                3668  2101319             0
+svchost                3924  2101314             0
+svchost                3992  2101328             0
+svchost                5344  2101316             0
+svchost                5528  2101376             0
+svchost                5664  2101365             0
+svchost                5724  2101315             0
+svchost                5796  2101322             0
+svchost                5976  2101379             0
+svchost                5984  2101367             0
+svchost                6100  2101327             0
+svchost                6352  2101383             0
+svchost                7044  2101404             0
+svchost                7068  2101361             0
+svchost                7236  2101421             0
+svchost                7448  2101349             0
+svchost                7716  2101432             0
+svchost                8020  2101321             0
+svchost                8184  2101324             0
+svchost                8984  2101354             0
+svchost                9416  2101362             0
+svchost               11100  2101354             0
+svchost               11144  2101321             0
+svchost               11172  2101446             0
+svchost               11348  2101506             0
+System                    4       19             0
+taskhostw              9556  2101420             0
+unsecapp               4968  2101313             0
+wininit                 668  2101313             0
+winlogon               8788  2101341             0
+WINWORD                3120      635             0
+wlanext                3152  2101390             0
+WmiPrvSE               1776  2101411             0
+WmiPrvSE               5952  2101324             0
+ZeroConfigService      3624     4247             0
+
+
+PS C:\WINDOWS\system32> Get-EventLog -List | ft -Property @{n='NombreLog';e={$_.Log}},@{n='Per-Retencion';e={$_.MinimumRetentionDays}} 
+
+NombreLog              Per-Retencion
+---------              -------------
+Application                        0
+HardwareEvents                     0
+Internet Explorer                  7
+Key Management Service             0
+OAlerts                            0
+Security                           0
+System                             0
+Windows PowerShell                 0
+
+
+PS C:\WINDOWS\system32> Get-Service | sort Status -Descending | ft -GroupBy status
+
+
+   Status: Running
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  Power              Energía
+Running  Schedule           Programador de tareas
+Running  SAService          Conexant SmartAudio service
+Running  SamSs              Administrador de cuentas de seguridad
+Running  RpcSs              Llamada a procedimiento remoto (RPC)
+Running  RpcEptMapper       Asignador de extremos de RPC
+Running  RmSvc              Servicio de administración de radio
+Running  RegSrvc            Intel(R) PROSet/Wireless Registry S...
+Running  RasMan             Administrador de conexiones de acce...
+Running  QWAVE              Experiencia de calidad de audio y v...
+Running  ProfSvc            Servicio de perfil de usuario
+Running  PolicyAgent        Agente de directiva IPsec
+Running  PlugPlay           Plug and Play
+Running  PhoneSvc           Servicio telefónico
+Running  PcaSvc             Servicio Asistente para la compatib...
+Running  OneSyncSvc_aacbe7f Sincronizar host_aacbe7f
+Running  nsi                Servicio Interfaz de almacenamiento...
+Running  NlaSvc             Reconoc. ubicación de red
+Running  igfxCUIService2... Intel(R) HD Graphics Control Panel ...
+Running  IKEEXT             Módulos de creación de claves de IP...
+Running  iphlpsvc           Aplicación auxiliar IP
+Running  KeyIso             Aislamiento de claves CNG
+Running  LanmanServer       Servidor
+Running  LanmanWorkstation  Estación de trabajo
+Running  SecurityHealthS... Servicio del Centro de seguridad de...
+Running  lfsvc              Servicio de geolocalización
+Running  lmhosts            Aplicación auxiliar de NetBIOS sobr...
+Running  LSM                Administrador de sesión local
+Running  mpssvc             Firewall de Windows Defender
+Running  NcbService         Agente de conexión de red
+Running  Netman             Conexiones de red
+Running  netprofm           Servicio de lista de redes
+Running  LicenseManager     Servicio de administrador de licenc...
+Running  sedsvc             Windows Remediation Service
+Running  SENS               Servicio de notificación de eventos...
+Running  SgrmBroker         Agente de supervisión en tiempo de ...
+Running  Wcmsvc             Administrador de conexiones de Windows
+Running  WdiServiceHost     Host del servicio de diagnóstico
+Running  WdiSystemHost      Host de sistema de diagnóstico
+Running  WdNisSvc           Servicio de inspección de red de An...
+Running  WinDefend          Servicio de Antivirus de Windows De...
+Running  WinHttpAutoProx... Servicio de detección automática de...
+Running  VaultSvc           Administrador de credenciales
+Running  Winmgmt            Instrumental de administración de W...
+Running  wlidsvc            Ayudante para el inicio de sesión d...
+Running  WpnService         Servicio del sistema de notificacio...
+Running  WpnUserService_... Servicio de usuario de notificacion...
+Running  wscsvc             Centro de seguridad
+Running  wuauserv           Windows Update
+Running  WwanSvc            Configuración automática de WWAN
+Running  WlanSvc            Configuración automática de WLAN
+Running  IAStorDataMgrSvc   Intel(R) Rapid Storage Technology
+Running  UsoSvc             Update Orchestrator Service
+Running  TrkWks             Cliente de seguimiento de vínculos ...
+Running  ShellHWDetection   Detección de hardware shell
+Running  SmsRouter          Servicio enrutador de SMS de Micros...
+Running  Spooler            Cola de impresión
+Running  SSDPSRV            Detección SSDP
+Running  SstpSvc            Servicio de protocolo de túnel de s...
+Running  StateRepository    Servicio de repositorio de estado
+Running  UserManager        Administrador de usuarios
+Running  stisvc             Adquisición de imágenes de Windows ...
+Running  SystemEventsBroker Agente de eventos del sistema
+Running  TabletInputService Servicio de Panel de escritura a ma...
+Running  TapiSrv            Telefonía
+Running  Themes             Temas
+Running  TimeBrokerSvc      Agente de eventos de tiempo
+Running  TokenBroker        Administrador de cuentas web
+Running  StorSvc            Servicio de almacenamiento
+Running  hidserv            Servicio de dispositivo de interfaz...
+Running  ZeroConfigService  Intel(R) PROSet/Wireless Zero Confi...
+Running  DeviceAssociati... Servicio de asociación de dispositivos
+Running  EventLog           Registro de eventos de Windows
+Running  ETDService         Elan Service
+Running  BFE                Motor de filtrado de base
+Running  BrokerInfrastru... Servicio de infraestructura de tare...
+Running  DsSvc              Servicio de uso compartido de datos
+Running  DPS                Servicio de directivas de diagnóstico
+Running  DoSvc              Optimización de distribución
+Running  Dnscache           Cliente DNS
+Running  BTAGService        Servicio de puerta de enlace de aud...
+Running  BthAvctpSvc        Servicio AVCTP
+Running  bthserv            Servicio de compatibilidad con Blue...
+Running  Dhcp               Cliente DHCP
+Running  camsvc             Servicio Administrador de funcional...
+Running  CDPSvc             Servicio de plataforma de dispositi...
+Running  CDPUserSvc_aacbe7f Servicio de usuario de plataforma d...
+Running  ClickToRunSvc      Microsoft Office Click-to-Run Service
+Running  CoreMessagingRe... CoreMessaging
+Running  CryptSvc           Servicios de cifrado
+Running  CxAudMsg           Conexant Audio Message Service
+Running  EventSystem        Sistema de eventos COM+
+Running  EvtEng             Intel(R) PROSet/Wireless Event Log
+Running  DusmSvc            Uso de datos
+Running  AudioEndpointBu... Compilador de extremo de audio de W...
+Running  Appinfo            Información de la aplicación
+Running  FontCache3.0.0.0   Windows Presentation Foundation Fon...
+Running  Audiosrv           Audio de Windows
+Running  FontCache          Servicio de caché de fuentes de Win...
+Running  DcomLaunch         Iniciador de procesos de servidor DCOM
+
+
+   Status: Stopped
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  WiaRpc             Eventos de adquisición de imágenes ...
+Stopped  vds                Disco virtual
+Stopped  AppReadiness       Preparación de aplicaciones
+Stopped  VacSvc             Servicio Volumetric Audio Compositor
+Stopped  WsAppService       Wondershare Application Framework S...
+Stopped  WsAppService3      Wondershare Application Update Serv...
+Stopped  UserDataSvc_aac... Acceso a datos de usuarios_aacbe7f
+Stopped  upnphost           Dispositivo host de UPnP
+Stopped  UnistoreSvc_aac... Almacenamiento de datos de usuarios...
+Stopped  UmRdpService       Redirector de puerto en modo usuari...
+Stopped  tzautoupdate       Actualizador de zona horaria automá...
+Stopped  wisvc              Servicio de Windows Insider
+Stopped  TrustedInstaller   Instalador de módulos de Windows
+Stopped  WSearch            Windows Search
+Stopped  AppIDSvc           Identidad de aplicación
+Stopped  vmicguestinterface Interfaz de servicio invitado de Hy...
+Stopped  ALG                Servicio de puerta de enlace de niv...
+Stopped  CertPropSvc        Propagación de certificados
+Stopped  TermService        Servicios de Escritorio remoto
+Stopped  xbgm               Xbox Game Monitoring
+Stopped  ClipSVC            Servicio de licencia de cliente (Cl...
+Stopped  clr_optimizatio... .NET Runtime Optimization Service v...
+Stopped  SysMain            Superfetch
+Stopped  swprv              Proveedor de instantáneas de softwa...
+Stopped  svsvc              Comprobador puntual
+Stopped  COMSysApp          Aplicación del sistema COM+
+Stopped  XblAuthManager     Administración de autenticación de ...
+Stopped  cphs               Intel(R) Content Protection HECI Se...
+Stopped  XblGameSave        Partida guardada en Xbox Live
+Stopped  ssh-agent          OpenSSH Authentication Agent
+Stopped  XboxGipSvc         Xbox Accessory Management Service
+Stopped  TieringEngineSe... Administración de capas de almacena...
+Stopped  BDESVC             Servicio Cifrado de unidad BitLocker
+Stopped  AppXSvc            Servicio de implementación de AppX ...
+Stopped  vmicheartbeat      Servicio de latido de Hyper-V
+Stopped  wlpasvc            Servicio de asistente para perfil l...
+Stopped  WFDSConMgrSvc      Servicio de administrador de conexi...
+Stopped  WerSvc             Servicio Informe de errores de Windows
+Stopped  wmiApSrv           Adaptador de rendimiento de WMI
+Stopped  WMPNetworkSvc      Servicio de uso compartido de red d...
+Stopped  wercplsupport      Ayuda del Panel de control de Infor...
+Stopped  WEPHOSTSVC         Servicio host de proveedor de cifra...
+Stopped  Wecsvc             Recopilador de eventos de Windows
+Stopped  WebClient          Cliente web
+Stopped  workfolderssvc     Carpetas de trabajo
+Stopped  BITS               Servicio de transferencia inteligen...
+Stopped  BluetoothUserSe... Servicio de soporte técnico de usua...
+Stopped  wcncsvc            Registrador de configuración de Win...
+Stopped  WpcMonSvc          Control parental
+Stopped  WinRM              Administración remota de Windows (W...
+Stopped  WbioSrvc           Servicio biométrico de Windows
+Stopped  WarpJITSvc         WarpJITSvc
+Stopped  sppsvc             Protección de software
+Stopped  WalletService      WalletService
+Stopped  WaaSMedicSvc       Windows Update Medic Service
+Stopped  WPDBusEnum         Servicio enumerador de dispositivos...
+Stopped  W32Time            Hora de Windows
+Stopped  VSS                Instantáneas de volumen
+Stopped  vmicvss            Solicitante de instantáneas de volu...
+Stopped  vmicvmsession      Servicio PowerShell Direct de Hyper-V
+Stopped  vmictimesync       Servicio de sincronización de hora ...
+Stopped  vmicshutdown       Servicio de cierre de invitado de H...
+Stopped  BcastDVRUserSer... Servicio de usuario de difusión y G...
+Stopped  vmicrdv            Servicio de virtualización de Escri...
+Stopped  AxInstSV           Instalador de ActiveX (AxInstSV)
+Stopped  wbengine           Servicio del módulo de copia de seg...
+Stopped  vmickvpexchange    Servicio de intercambio de datos de...
+Stopped  gupdate            Google Update Servicio (gupdate)
+Stopped  SNMPTRAP           Captura SNMP
+Stopped  MSiSCSI            Servicio del iniciador iSCSI de Mic...
+Stopped  msiserver          Windows Installer
+Stopped  MyWiFiDHCPDNS      Wireless PAN DHCP Server
+Stopped  NaturalAuthenti... Autenticación natural
+Stopped  NcaSvc             Asistente para la conectividad de red
+Stopped  NcdAutoSetup       Configuración automática de disposi...
+Stopped  Netlogon           Net Logon
+Stopped  NetSetupSvc        Servicio de configuración de red
+Stopped  NetTcpPortSharing  Servicio de uso compartido de puert...
+Stopped  NgcCtnrSvc         Contenedor de Microsoft Passport
+Stopped  NgcSvc             Microsoft Passport
+Stopped  EntAppSvc          Servicio de administración de aplic...
+Stopped  embeddedmode       Modo incrustado
+Stopped  EFS                Sistema de cifrado de archivos (EFS)
+Stopped  ose                Office  Source Engine
+Stopped  p2pimsvc           Administrador de identidad de redes...
+Stopped  p2psvc             Agrupación de red del mismo nivel
+Stopped  MSDTC              Coordinador de transacciones distri...
+Stopped  Eaphost            Protocolo de autenticación extensible
+Stopped  MessagingServic... MessagingService_aacbe7f
+Stopped  LxpSvc             Servicio de experiencia de idioma
+Stopped  HvHost             Servicio de host HV
+Stopped  GraphicsPerfSvc    GraphicsPerfSvc
+Stopped  ibtsiva            Intel Bluetooth Service
+Stopped  icssvc             Servicio de zona con cobertura inal...
+Stopped  gpsvc              Cliente de directiva de grupo
+Stopped  GoogleChromeEle... Google Chrome Elevation Service
+Stopped  InstallService     Servicio de instalación de Microsof...
+Stopped  Freemake Improver  Freemake Improver
+Stopped  IpxlatCfgSvc       Servicio de configuración de trasla...
+Stopped  irmon              Servicio de monitor de infrarrojos
+Stopped  FrameServer        Servicio FrameServer de la Cámara d...
+Stopped  KtmRm              KTMRM para DTC (Coordinador de tran...
+Stopped  fhsvc              Servicio de historial de archivos
+Stopped  FDResPub           Publicación de recurso de detección...
+Stopped  lltdsvc            Asignador de detección de topología...
+Stopped  fdPHost            Host de proveedor de detección de f...
+Stopped  Fax                Fax
+Stopped  MapsBroker         Administrador de mapas descargados
+Stopped  spectrum           Servicio de percepción de Windows
+Stopped  PerfHost           DLL de host del Contador de rendimi...
+Stopped  pla                Registros y alertas de rendimiento
+Stopped  SDRSVC             Copias de seguridad de Windows
+Stopped  seclogon           Inicio de sesión secundario
+Stopped  DevQueryBroker     Agente de detección en segundo plan...
+Stopped  DevicesFlowUser... DevicesFlow_aacbe7f
+Stopped  SEMgrSvc           Administrador de pagos y NFC/SE
+Stopped  DevicePickerUse... DevicePicker_aacbe7f
+Stopped  SensorDataService  Servicio de datos del sensor
+Stopped  SensorService      Servicio de sensores
+Stopped  SensrSvc           Servicio de supervisión de sensores
+Stopped  SessionEnv         Configuración de Escritorio remoto
+Stopped  DeviceInstall      Servicio de instalación de disposit...
+Stopped  SharedAccess       Conexión compartida a Internet (ICS)
+Stopped  SharedRealitySvc   Servicio de datos espacial
+Stopped  gupdatem           Google Update Servicio (gupdatem)
+Stopped  shpamsvc           Shared PC Account Manager
+Stopped  smphost            SMP de Espacios de almacenamiento d...
+Stopped  defragsvc          Optimizar unidades
+Stopped  SCPolicySvc        Directiva de extracción de tarjetas...
+Stopped  PimIndexMainten... Datos de contactos_aacbe7f
+Stopped  ScDeviceEnum       Servicio de enumeración de disposit...
+Stopped  diagnosticshub.... Servicio Recopilador estándar del c...
+Stopped  PNRPAutoReg        Servicio de publicación de nombres ...
+Stopped  PNRPsvc            Protocolo de resolución de nombres ...
+Stopped  DsmSvc             Administrador de configuración de d...
+Stopped  XboxNetApiSvc      Servicio de red de Xbox Live
+Stopped  PrintNotify        Extensiones y notificaciones de imp...
+Stopped  PrintWorkflowUs... PrintWorkflow_aacbe7f
+Stopped  PushToInstall      Servicio PushToInstall de Windows
+Stopped  dot3svc            Configuración automática de redes c...
+Stopped  RasAuto            Administrador de conexiones automát...
+Stopped  RemoteAccess       Enrutamiento y acceso remoto
+Stopped  RemoteRegistry     Registro remoto
+Stopped  RetailDemo         Servicio de prueba comercial
+Stopped  dmwappushservice   dmwappushsvc
+Stopped  DmEnrollmentSvc    Servicio de inscripción de administ...
+Stopped  RpcLocator         Ubicador de llamada a procedimiento...
+Stopped  DiagTrack          Telemetría y experiencias del usuar...
+Stopped  diagsvc            Diagnostic Execution Service
+Stopped  SCardSvr           Tarjeta inteligente
+Stopped  AJRouter           Servicio de enrutador de AllJoyn
+
+
+PS C:\WINDOWS\system32> dir C: | fw  -Column 4
+
+
+    Directorio: C:\WINDOWS\system32
+
+
+
+0409                          AdvancedInstallers            af-ZA                        am-et
+AppLocker                     appraiser                     ar-SA                        as-IN
+az-Latn-AZ                    be-BY                         bg-BG                        bn-BD
+bn-IN                         Boot                          bs-Latn-BA                   Bthprops
+ca-ES                         ca-ES-valencia                CatRoot                      catroot2
+chr-CHER-US                   CodeIntegrity                 com                          config
+Configuration                 cs-CZ                         cy-GB                        da-DK
+DDFs                          de-DE                         DiagSvcs                     Dism
+downlevel                     drivers                       DriverState                  DriverStore
+DRVSTORE                      dsc                           el-GR                        en
+en-GB                         en-US                         es                           es-ES
+es-MX                         et-EE                         eu-ES                        F12
+fa-IR                         fi-FI                         fil-PH                       fr-CA
+fr-FR                         FxsTmp                        ga-IE                        gd-GB
+gl-ES                         GroupPolicyUsers              gu-IN                        ha-Latn-NG
+he-IL                         hi-IN                         hr-HR                        hu-HU
+hy-AM                         hydrogen                      ias                          icsxml
+id-ID                         ig-NG                         IME                          inetsrv
+InputMethod                   Ipmi                          is-IS                        it-IT
+ja-jp                         ka-GE                         kk-KZ                        km-KH
+kn-IN                         ko-KR                         kok-IN                       ku-Arab-IQ
+ky-KG                         lb-LU                         Licenses                     lo-LA
+LogFiles                      lt-LT                         lv-LV                        Macromed
+MailContactsCalendarSync      mi-NZ                         Microsoft                    migration
+migwiz                        mk-MK                         ml-IN                        mn-MN
+mr-IN                         MRT                           ms-MY                        MSDRM
+MsDtc                         mt-MT                         MUI                          my-mm
+nb-NO                         NDF                           ne-NP                        networklist
+nl-NL                         nn-NO                         Npcap                        nso-ZA
+Nui                           oobe                          OpenSSH                      or-IN
+pa-Arab-PK                    pa-IN                         pl-PL                        PointOfService
+Printing_Admin_Scripts        ProximityToast                prs-AF                       pt-BR
+pt-PT                         quc-Latn-GT                   quz-PE                       ras
+RasToast                      Recovery                      restore                      ro-RO
+ru-RU                         rw-RW                         sd-Arab-PK                   SecureBootUpdates
+setup                         ShellExperiences              si-lk                        sk-SK
+sl-SI                         SleepStudy                    slmgr                        SMI
+Speech                        Speech_OneCore                spool                        spp
+sppui                         sq-AL                         sr-Cyrl-BA                   sr-Cyrl-RS
+sr-Latn-RS                    sru                           sv-SE                        sw-KE
+Sysprep                       SystemResetPlatform           ta-in                        ta-lk
+Tasks                         Tasks_Migrated                te-IN                        tg-Cyrl-TJ
+th-TH                         ti-ET                         tk-TM                        tn-ZA
+tr-TR                         tt-RU                         ug-CN                        uk-UA
+UNP                           ur-PK                         uz-Latn-UZ                   vi-VN
+wbem                          WCN                           WDI                          WinBioDatabase
+WinBioPlugIns                 WindowsPowerShell             winevt                       WinMetadata
+winrm                         wo-SN                         xh-ZA                        yo-NG
+zh-CN                         zh-TW                         zu-ZA                        @AudioToastIcon.png
+@BackgroundAccessToastIcon... @bitlockertoastimage.png      @edptoastimage.png           @EnrollmentToastIcon.png
+@language_notification_ico... @optionalfeatures.png         @VpnToastIcon.png            @WiFiNotificationIcon.png
+@windows-hello-V4.1.gif       @WindowsHelloFaceToastIcon... @WindowsUpdateToastIcon.c... @WindowsUpdateToastIcon.c...
+@WindowsUpdateToastIcon.png   @WirelessDisplayToast.png     @WwanNotificationIcon.png    @WwanSimLockIcon.png
+aadauthhelper.dll             aadcloudap.dll                aadjcsp.dll                  aadtb.dll
+aadWamExtension.dll           AboutSettingsHandlers.dll     AboveLockAppHost.dll         accessibilitycpl.dll
+accountaccessor.dll           AccountsRt.dll                AcGenral.dll                 AcLayers.dll
+acledit.dll                   aclui.dll                     acmigration.dll              ACPBackgroundManagerPolic...
+acppage.dll                   acproxy.dll                   AcSpecfc.dll                 ActionCenter.dll
+ActionCenterCPL.dll           ActionQueue.dll               ActivationClient.dll         ActivationManager.dll
+activeds.dll                  activeds.tlb                  ActiveSyncCsp.dll            ActiveSyncProvider.dll
+actxprxy.dll                  AcWinRT.dll                   AcXtrnal.dll                 AdaptiveCards.dll
+AddressParser.dll             adhapi.dll                    adhsvc.dll                   adprovider.dll
+adsldp.dll                    adsldpc.dll                   adsmsext.dll                 adsnt.dll
+adtschema.dll                 AdvancedEmojiDS.dll           advapi32.dll                 advapi32res.dll
+advpack.dll                   aeevts.dll                    aeinv.dll                    aepic.dll
+aitstatic.exe                 AJRouter.dll                  alg.exe                      altspace.dll
+amcompat.tlb                  amsi.dll                      amsiproxy.dll                amstream.dll
+Analog.Shell.Broker.dll       AnalogCommonProxyStub.dll     apds.dll                     APHostClient.dll
+APHostRes.dll                 APHostService.dll             ApiSetHost.AppExecutionAl... apisetschema.dll
+AppContracts.dll              AppExtension.dll              apphelp.dll                  Apphlpdm.dll
+AppHostRegistrationVerifie... appidapi.dll                  appidcertstorecheck.exe      appidpolicyconverter.exe
+appidsvc.dll                  appidtel.exe                  appinfo.dll                  appinfoext.dll
+ApplicationFrame.dll          ApplicationFrameHost.exe      AppLockerCSP.dll             ApplyTrustOffline.exe
+AppMon.dll                    AppointmentActivation.dll     AppointmentApis.dll          appraiser.dll
+AppReadiness.dll              apprepapi.dll                 AppResolver.dll              ApproveChildRequest.exe
+appsruprov.dll                appwiz.cpl                    AppxAllUserStore.dll         AppXApplicabilityBlob.dll
+AppxApplicabilityEngine.dll   AppXDeploymentClient.dll      AppXDeploymentExtensions.... AppXDeploymentExtensions....
+AppXDeploymentServer.dll      AppxPackaging.dll             AppxProvisioning.xml         AppxSip.dll
+AppxStreamingDataSourcePS.dll AppxSysprep.dll               archiveint.dll               ARP.EXE
+asferror.dll                  aspnet_counters.dll           asycfilt.dll                 at.exe
+AtBroker.exe                  atl.dll                       atl100.dll                   atl110.dll
+atlthunk.dll                  atmfd.dll                     atmlib.dll                   attrib.exe
+audiodg.exe                   AudioEndpointBuilder.dll      AudioEng.dll                 AudioHandlers.dll
+AUDIOKSE.dll                  audioresourceregistrar.dll    AudioSes.dll                 audiosrv.dll
+AudioSrvPolicyManager.dll     auditcse.dll                  auditpol.exe                 auditpolcore.dll
+AuthBroker.dll                AuthBrokerUI.dll              AuthExt.dll                  authfwcfg.dll
+AuthFWGP.dll                  AuthFWSnapin.dll              AuthFWWizFwk.dll             AuthHost.exe
+AuthHostProxy.dll             authui.dll                    authz.dll                    autochk.exe
+autoconv.exe                  autofmt.exe                   autopilot.dll                autoplay.dll
+AverageRoom.bin               avicap32.dll                  avifil32.dll                 avrt.dll
+AxInstSv.dll                  AxInstUI.exe                  azman.msc                    azroles.dll
+azroleui.dll                  AzSqlExt.dll                  AzureSettingSyncProvider.dll BackgroundMediaPolicy.dll
+backgroundTaskHost.exe        BackgroundTransferHost.exe    BamSettingsClient.dll        BarcodeProvisioningPlugin...
+basecsp.dll                   basesrv.dll                   batmeter.dll                 bcastdvr.proxy.dll
+BcastDVRBroker.dll            BcastDVRClient.dll            BcastDVRCommon.dll           bcastdvruserservice.dll
+bcd.dll                       bcdboot.exe                   bcdedit.exe                  bcdprov.dll
+bcdsrv.dll                    BCP47Langs.dll                BCP47mrm.dll                 bcrypt.dll
+bcryptprimitives.dll          bdaplgin.ax                   BdeHdCfgLib.dll              bderepair.dll
+bdesvc.dll                    bdeui.dll                     BdeUISrv.exe                 bdeunlock.exe
+BFE.DLL                       bi.dll                        bidispl.dll                  BingASDS.dll
+BingFilterDS.dll              BingMaps.dll                  BingOnlineServices.dll       BioCredProv.dll
+BioIso.exe                    bisrv.dll                     BitLockerCsp.dll             BitLockerDeviceEncryption...
+BitLockerWizardElev.exe       bitsadmin.exe                 bitsigd.dll                  bitsperf.dll
+BitsProxy.dll                 biwinrt.dll                   BlbEvents.dll                blbres.dll
+blb_ps.dll                    BluetoothApis.dll             BluetoothDesktopHandlers.dll BluetoothPairingSystemToa...
+BluetoothPairingSystemToas... BluetoothPairingSystemToas... BluetoothPairingSystemToa... BluetoothSystemToastIcon....
+BluetoothSystemToastIcon.png  bnmanager.dll                 boot.sdi                     bootcfg.exe
+bootim.exe                    BootMenuUX.dll                bootsect.exe                 bootstr.dll
+bootux.dll                    BOOTVID.DLL                   bopomofo.uce                 bridgeres.dll
+bridgeunattend.exe            BrokerLib.dll                 browcli.dll                  browserbroker.dll
+browserexport.exe             BrowserSettingSync.dll        browser_broker.exe           browseui.dll
+BTAGService.dll               BTAudioGatewayClient.dll      BthAvctpSvc.dll              BthAvrcp.dll
+BthAvrcpAppSvc.dll            bthci.dll                     BthMtpContextHandler.dll     bthpanapi.dll
+BthpanContextHandler.dll      bthprops.cpl                  BthRadioMedia.dll            bthserv.dll
+BthTelemetry.dll              bthudtask.exe                 btpanui.dll                  Bubbles.scr
+BWContextHandler.dll          ByteCodeGenerator.exe         cabapi.dll                   cabinet.dll
+cabview.dll                   cacls.exe                     calc.exe                     CallButtons.dll
+CallButtons.ProxyStub.dll     CallHistoryClient.dll         CameraCaptureUI.dll          CameraSettingsUIHost.exe
+canonurl.dll                  CapabilityAccessHandlers.dll  CapabilityAccessManager.dll  CapabilityAccessManagerCl...
+capauthz.dll                  capiprovider.dll              capisp.dll                   CastingShellExt.dll
+CastLaunch.dll                CastSrv.exe                   catsrv.dll                   catsrvps.dll
+catsrvut.dll                  cca.dll                       cdd.dll                      cdosys.dll
+cdp.dll                       cdprt.dll                     cdpsvc.dll                   cdpusersvc.dll
+CellularAPI.dll               cellulardatacapabilityhand... cemapi.dll                   cero.rs
+certca.dll                    certcli.dll                   certCredProvider.dll         certenc.dll
+CertEnroll.dll                CertEnrollCtrl.exe            CertEnrollUI.dll             certlm.msc
+certmgr.dll                   certmgr.msc                   CertPKICmdlet.dll            CertPolEng.dll
+certprop.dll                  certreq.exe                   certutil.exe                 cewmdm.dll
+cfgbkend.dll                  cfgmgr32.dll                  CfgSPCellular.dll            CfgSPPolicy.dll
+cflapi.dll                    cfmifs.dll                    cfmifsproxy.dll              Chakra.dll
+Chakradiag.dll                Chakrathunk.dll               changepk.exe                 charmap.exe
+chartv.dll                    ChatApis.dll                  chcp.com                     CheckNetIsolation.exe
+chkdsk.exe                    chkntfs.exe                   chkwudrv.dll                 choice.exe
+ChsStrokeDS.dll               chs_singlechar_pinyin.dat     ChtBopomofoDS.dll            ChtCangjieDS.dll
+ChtHkStrokeDS.dll             ChtQuickDS.dll                ChxAPDS.dll                  ChxDecoder.dll
+ChxHAPDS.dll                  chxinputrouter.dll            chxranker.dll                CHxReadingStringIME.dll
+ci.dll                        cic.dll                       CIDiag.exe                   cipher.exe
+CIRCoInst.dll                 clb.dll                       clbcatq.dll                  cldapi.dll
+cleanmgr.exe                  CleanPCCSP.dll                clfsw32.dll                  cliconfg.dll
+cliconfg.exe                  cliconfg.rll                  clip.exe                     ClipboardServer.dll
+Clipc.dll                     ClipRenew.exe                 ClipSVC.dll                  ClipUp.exe
+cloudAP.dll                   CloudBackupSettings.dll       CloudDomainJoinAUG.dll       CloudDomainJoinDataModelS...
+CloudExperienceHost.dll       CloudExperienceHostBroker.dll CloudExperienceHostBroker... CloudExperienceHostCommon...
+CloudExperienceHostUser.dll   CloudNotifications.exe        CloudStorageWizard.exe       clrhost.dll
+clusapi.dll                   cmcfg32.dll                   cmd.exe                      cmdext.dll
+cmdial32.dll                  cmdkey.exe                    cmdl32.exe                   cmgrcspps.dll
+cmifw.dll                     cmintegrator.dll              cmlua.dll                    cmmon32.exe
+cmpbk32.dll                   cmstp.exe                     cmstplua.dll                 cmutil.dll
+cngcredui.dll                 cngprovider.dll               cnvfat.dll                   cob-au.rs
+cofire.exe                    cofiredm.dll                  colbact.dll                  coloradapterclient.dll
+COLORCNV.DLL                  colorcpl.exe                  ColorImageEnhancement.wmv    colorui.dll
+combase.dll                   comcat.dll                    comctl32.dll                 comdlg32.dll
+comexp.msc                    coml2.dll                     common_clang64.dll           comp.exe
+compact.exe                   CompatTelRunner.exe           compmgmt.msc                 CompMgmtLauncher.exe
+ComposableShellProxyStub.dll  ComposerFramework.dll         CompPkgSup.dll               compstui.dll
+ComputerDefaults.exe          ComputerToastIcon.contrast... ComputerToastIcon.png        comrepl.dll
+comres.dll                    comsnap.dll                   comsvcs.dll                  comuid.dll
+concrt140.dll                 configmanager2.dll            ConfigureExpandedStorage.dll conhost.exe
+ConhostV1.dll                 connect.dll                   ConnectedAccountState.dll    consent.exe
+ConsentUX.dll                 console.dll                   ConsoleLogon.dll             ConstraintIndex.Search.dll
+ContactActivation.dll         ContactApis.dll               ContactHarvesterDS.dll       container.dll
+ContentDeliveryManager.Uti... control.exe                   convert.exe                  convertvhd.exe
+coreaudiopolicymanagerext.dll coredpus.dll                  coredpussvr.exe              CoreMessaging.dll
+CoreMmRes.dll                 CoreShell.dll                 CoreShellAPI.dll             CoreShellExtFramework.dll
+CoreUIComponents.dll          correngine.dll                Cortana.Persona.dll          CortanaMapiHelper.dll
+CortanaMapiHelper.ProxyStu... CourtesyEngine.dll            CPFilters.dll                cp_resources.bin
+CredDialogBroker.dll          CredentialMigrationHandler... CredentialUIBroker.exe       CredProv2faHelper.dll
+CredProvDataModel.dll         CredProvHelper.dll            credprovhost.dll             credprovs.dll
+credprovslegacy.dll           credssp.dll                   credui.dll                   credwiz.exe
+crypt32.dll                   cryptbase.dll                 cryptcatsvc.dll              cryptdlg.dll
+cryptdll.dll                  cryptext.dll                  cryptnet.dll                 cryptngc.dll
+CryptoWinRT.dll               cryptsp.dll                   cryptsvc.dll                 crypttpmeksvc.dll
+cryptui.dll                   cryptuiwizard.dll             cryptxml.dll                 cscapi.dll
+cscdll.dll                    cscript.exe                   csnp2uvc.dll                 CspCellularSettings.dll
+CSpkExt64.dll                 csplte.dll                    CspProxy.dll                 csrr.rs
+csrsrv.dll                    csrss.exe                     CSystemEventsBrokerClient... ctfmon.exe
+cttune.exe                    cttunesvr.exe                 curl.exe                     CX64AP90.dll
+CX64BP23.dll                  CxAudMsg64.exe                CXHProvisioningServer.dll    CxPageMaster64.dll
+C_037.NLS                     C_10000.NLS                   C_10001.NLS                  C_10002.NLS
+C_10003.NLS                   C_10004.NLS                   C_10005.NLS                  C_10006.NLS
+C_10007.NLS                   C_10008.NLS                   C_10010.NLS                  C_10017.NLS
+C_10021.NLS                   C_10029.NLS                   C_10079.NLS                  C_10081.NLS
+C_10082.NLS                   C_1026.NLS                    C_1047.NLS                   C_1140.NLS
+C_1141.NLS                    C_1142.NLS                    C_1143.NLS                   C_1144.NLS
+C_1145.NLS                    C_1146.NLS                    C_1147.NLS                   C_1148.NLS
+C_1149.NLS                    C_1250.NLS                    C_1251.NLS                   C_1252.NLS
+C_1253.NLS                    C_1254.NLS                    C_1255.NLS                   C_1256.NLS
+C_1257.NLS                    C_1258.NLS                    C_1361.NLS                   C_20000.NLS
+C_20001.NLS                   C_20002.NLS                   C_20003.NLS                  C_20004.NLS
+C_20005.NLS                   C_20105.NLS                   C_20106.NLS                  C_20107.NLS
+C_20108.NLS                   C_20127.NLS                   C_20261.NLS                  C_20269.NLS
+C_20273.NLS                   C_20277.NLS                   C_20278.NLS                  C_20280.NLS
+C_20284.NLS                   C_20285.NLS                   C_20290.NLS                  C_20297.NLS
+C_20420.NLS                   C_20423.NLS                   C_20424.NLS                  C_20833.NLS
+C_20838.NLS                   C_20866.NLS                   C_20871.NLS                  C_20880.NLS
+C_20905.NLS                   C_20924.NLS                   C_20932.NLS                  C_20936.NLS
+C_20949.NLS                   C_21025.NLS                   C_21027.NLS                  C_21866.NLS
+C_28591.NLS                   C_28592.NLS                   C_28593.NLS                  C_28594.NLS
+C_28595.NLS                   C_28596.NLS                   C_28597.NLS                  C_28598.NLS
+C_28599.NLS                   c_28603.nls                   C_28605.NLS                  C_437.NLS
+C_500.NLS                     C_65001.NLS                   C_708.NLS                    C_720.NLS
+C_737.NLS                     C_775.NLS                     C_850.NLS                    C_852.NLS
+C_855.NLS                     C_857.NLS                     C_858.NLS                    C_860.NLS
+C_861.NLS                     C_862.NLS                     C_863.NLS                    C_864.NLS
+C_865.NLS                     C_866.NLS                     C_869.NLS                    C_870.NLS
+C_874.NLS                     C_875.NLS                     C_932.NLS                    C_936.NLS
+C_949.NLS                     C_950.NLS                     C_G18030.DLL                 c_GSM7.DLL
+C_IS2022.DLL                  C_ISCII.DLL                   d2d1.dll                     d3d10.dll
+d3d10core.dll                 d3d10level9.dll               d3d10warp.dll                d3d10_1.dll
+d3d10_1core.dll               d3d11.dll                     D3D12.dll                    d3d8thk.dll
+d3d9.dll                      d3d9on12.dll                  D3DCompiler_33.dll           D3DCompiler_34.dll
+D3DCompiler_35.dll            D3DCompiler_36.dll            D3DCompiler_37.dll           D3DCompiler_38.dll
+D3DCompiler_39.dll            D3DCompiler_40.dll            D3DCompiler_41.dll           D3DCompiler_42.dll
+D3DCompiler_43.dll            D3DCompiler_47.dll            d3dcsx_42.dll                d3dcsx_43.dll
+D3DSCache.dll                 d3dx10.dll                    d3dx10_33.dll                d3dx10_34.dll
+d3dx10_35.dll                 d3dx10_36.dll                 d3dx10_37.dll                d3dx10_38.dll
+d3dx10_39.dll                 d3dx10_40.dll                 d3dx10_41.dll                d3dx10_42.dll
+d3dx10_43.dll                 d3dx11_42.dll                 d3dx11_43.dll                d3dx9_24.dll
+d3dx9_25.dll                  d3dx9_26.dll                  d3dx9_27.dll                 d3dx9_28.dll
+d3dx9_29.dll                  d3dx9_30.dll                  d3dx9_31.dll                 d3dx9_32.dll
+d3dx9_33.dll                  d3dx9_34.dll                  d3dx9_35.dll                 d3dx9_36.dll
+D3DX9_37.dll                  D3DX9_38.dll                  D3DX9_39.dll                 D3DX9_40.dll
+D3DX9_41.dll                  D3DX9_42.dll                  D3DX9_43.dll                 dab.dll
+dabapi.dll                    DAConn.dll                    dafAspInfraProvider.dll      dafBth.dll
+DafDnsSd.dll                  dafDockingProvider.dll        DafGip.dll                   DAFIoT.dll
+DAFIPP.dll                    dafpos.dll                    DafPrintProvider.dll         dafupnp.dll
+dafWCN.dll                    dafWfdProvider.dll            DAFWiProv.dll                DAFWSD.dll
+DAMediaManager.dll            DAMM.dll                      DaOtpCredentialProvider.dll  das.dll
+dasHost.exe                   dataclen.dll                  DataExchange.dll             DataExchangeHost.exe
+datamarketsvc.dll             DataStoreCacheDumpTool.exe    DataUsageHandlers.dll        DataUsageLiveTileTask.exe
+datusage.dll                  davclnt.dll                   davhlpr.dll                  DavSyncProvider.dll
+daxexec.dll                   dbgcore.dll                   dbgeng.dll                   dbghelp.dll
+DbgModel.dll                  dbnetlib.dll                  dbnmpntw.dll                 dccw.exe
+dciman32.dll                  dcntel.dll                    dcomcnfg.exe                 dcomp.dll
+DDACLSys.dll                  DdcAntiTheftApi.dll           DdcComImplementationsDesk... DDDS.dll
+ddisplay.dll                  ddodiag.exe                   DDOIProxy.dll                DDORes.dll
+DDPA64.dll                    DDPD64A.dll                   DDPO64A.dll                  DDPP64A.dll
+ddraw.dll                     ddrawex.dll                   DefaultAccountTile.png       DefaultDeviceManager.dll
+DefaultHrtfs.bin              DefaultPrinterProvider.dll    DefaultQuestions.json        Defrag.exe
+defragproxy.dll               defragres.dll                 defragsvc.dll                delegatorprovider.dll
+desk.cpl                      deskadp.dll                   deskmon.dll                  desktopimgdownldr.exe
+DesktopKeepOnToastImg.gif     DesktopShellAppStateContra... DesktopShellExt.dll          DesktopSwitcherDataModel.dll
+DesktopView.Internal.Broke... DesktopView.Internal.Broke... DetailedReading-Default.xml  DevDispItemProvider.dll
+DeveloperOptionsSettingsHa... devenum.dll                   deviceaccess.dll             deviceassociation.dll
+DeviceCensus.exe              DeviceCenter.dll              DeviceCredential.dll         DeviceCredentialDeploymen...
+DeviceDirectoryClient.dll     DeviceDisplayStatusManager... DeviceDriverRetrievalClie... DeviceEject.exe
+DeviceElementSource.dll       DeviceEnroller.exe            DeviceFlows.DataModel.dll    DeviceMetadataRetrievalCl...
+devicengccredprov.dll         DevicePairing.dll             DevicePairingExperienceME... DevicePairingFolder.dll
+DevicePairingProxy.dll        DevicePairingWizard.exe       DeviceProperties.exe         DeviceReactivation.dll
+deviceregistration.dll        DeviceSetupManager.dll        DeviceSetupManagerAPI.dll    DeviceSetupStatusProvider...
+DevicesFlowBroker.dll         DeviceSoftwareInstallation... DeviceUpdateAgent.dll        DeviceUxRes.dll
+devinv.dll                    devmgmt.msc                   devmgr.dll                   DevModeRunAsUserConfig.msc
+devobj.dll                    DevPropMgr.dll                DevQueryBroker.dll           devrtl.dll
+dfdts.dll                     DFDWiz.exe                    dfrgui.exe                   dfscli.dll
+dfshim.dll                    DfsShlEx.dll                  dhcpcmonitor.dll             dhcpcore.dll
+dhcpcore6.dll                 dhcpcsvc.dll                  dhcpcsvc6.dll                dhcpsapi.dll
+DHolographicDisplay.dll       DiagCpl.dll                   DiagnosticInvoker.dll        DiagnosticLogCSP.dll
+diagperf.dll                  DiagSvc.dll                   diagtrack.dll                dialclient.dll
+dialer.exe                    dialserver.dll                DictationManager.dll         difx64.exe
+difxapi.dll                   dimsjob.dll                   dimsroam.dll                 dinput.dll
+dinput8.dll                   Direct2DDesktop.dll           directmanipulation.dll       discan.dll
+diskmgmt.msc                  diskpart.exe                  diskperf.exe                 diskraid.exe
+DiskSnapshot.conf             DiskSnapshot.exe              Dism.exe                     DismApi.dll
+DispBroker.dll                dispdiag.exe                  dispex.dll                   Display.dll
+DisplayAudiox64.cab           DisplayManager.dll            DisplaySwitch.exe            DisplaySystemToastIcon.co...
+DisplaySystemToastIcon.png    djctq.rs                      djoin.exe                    dllhost.exe
+dllhst3g.exe                  dlnashext.dll                 DMAlertListener.ProxyStub... DmApiSetExtImplDesktop.dll
+DMAppsRes.dll                 dmcertinst.exe                dmcfghost.exe                dmcfgutils.dll
+dmclient.exe                  dmcmnutils.dll                dmcommandlineutils.dll       dmcsps.dll
+dmdlgs.dll                    dmdskmgr.dll                  dmdskres.dll                 dmdskres2.dll
+dmenrollengine.dll            dmenterprisediagnostics.dll   dmintf.dll                   dmiso8601utils.dll
+dml.dll                       dmloader.dll                  DmNotificationBroker.exe     dmocx.dll
+dmoleaututils.dll             DmOmaCpMo.exe                 dmprocessxmlfiltered.dll     dmpushproxy.dll
+DMPushRouterCore.dll          DMRCDecoder.dll               DMRServer.dll                dmsynth.dll
+dmusic.dll                    dmutil.dll                    dmvdsitf.dll                 dmview.ocx
+dmwappushsvc.dll              dmwmicsp.dll                  dmxmlhelputils.dll           dnsapi.dll
+dnscacheugc.exe               dnscmmc.dll                   dnsext.dll                   dnshc.dll
+dnsrslvr.dll                  Docking.VirtualInput.dll      DockInterface.ProxyStub.dll  docprop.dll
+DocumentPerformanceEvents.dll DolbyDecMFT.dll               DolbyHrtfEnc.dll             DolbyMATEnc.dll
+domgmt.dll                    dosettings.dll                doskey.exe                   dosvc.dll
+dot3api.dll                   dot3cfg.dll                   Dot3Conn.dll                 dot3dlg.dll
+dot3gpclnt.dll                dot3gpui.dll                  dot3hc.dll                   dot3mm.dll
+dot3msm.dll                   dot3svc.dll                   dot3ui.dll                   dpapi.dll
+dpapimig.exe                  dpapiprovider.dll             dpapisrv.dll                 DpiScaling.exe
+dpnaddr.dll                   dpnathlp.dll                  dpnet.dll                    dpnhpast.dll
+dpnhupnp.dll                  dpnlobby.dll                  dpnsvr.exe                   dps.dll
+DPTopologyApp.exe             DPTopologyApp.exe.config      DPTopologyAppv2_0.exe        DPTopologyAppv2_0.exe.config
+dpx.dll                       DragDropExperienceCommon.dll  DragDropExperienceDataExc... driverquery.exe
+drprov.dll                    drt.dll                       drtprov.dll                  drttransport.dll
+drvcfg.exe                    drvinst.exe                   drvstore.dll                 dsauth.dll
+DscCore.dll                   DscCoreConfProv.dll           dsclient.dll                 dscproxy.dll
+DscTimer.dll                  dsdmo.dll                     dskquota.dll                 dskquoui.dll
+DsmUserTask.exe               dsound.dll                    dsparse.dll                  dsprop.dll
+dsquery.dll                   dsreg.dll                     dsregcmd.exe                 dsrole.dll
+dssec.dat                     dssec.dll                     dssenh.dll                   dssvc.dll
+dstokenclean.exe              Dsui.dll                      dsuiext.dll                  dswave.dll
+dtsh.dll                      DTUHandler.exe                DTUHandlerPS.dll             DuCsps.dll
+dui70.dll                     duser.dll                     dusmapi.dll                  dusmsvc.dll
+dusmtask.exe                  dvdplay.exe                   dwm.exe                      dwmapi.dll
+dwmcore.dll                   dwmghost.dll                  dwminit.dll                  dwmredir.dll
+DWrite.dll                    DWWIN.EXE                     dxdiag.exe                   dxdiagn.dll
+dxgi.dll                      dxgiadaptercache.exe          dxgwdi.dll                   dxilconv.dll
+dxmasf.dll                    DXP.dll                       dxpps.dll                    Dxpserver.exe
+DxpTaskSync.dll               dxtmsft.dll                   dxtrans.dll                  dxva2.dll
+DynamicLong.bin               DynamicMedium.bin             DynamicShort.bin             dynamoapi.dll
+EAMProgressHandler.dll        Eap3Host.exe                  eapp3hst.dll                 eappcfg.dll
+eappcfgui.dll                 eappgnui.dll                  eapphost.dll                 eappprxy.dll
+eapprovp.dll                  eapsimextdesktop.dll          eapsvc.dll                   easconsent.dll
+EaseOfAccessDialog.exe        easinvoker.exe                easinvoker.proxystub.dll     EASPolicyManagerBrokerHos...
+EasPolicyManagerBrokerPS.dll  easwrt.dll                    edgeangle.dll                EdgeContent.dll
+edgehtml.dll                  edgehtmlpluginpolicy.bin      edgeIso.dll                  EdgeManager.dll
+EditBufferTestHook.dll        EditionUpgradeHelper.dll      EditionUpgradeManagerObj.dll edpauditapi.dll
+EDPCleanup.exe                edpcsp.dll                    edpnotify.exe                edptask.dll
+edputil.dll                   EduPrintProv.exe              eeprov.dll                   eeutil.dll
+efsadu.dll                    efscore.dll                   efsext.dll                   efslsaext.dll
+efssvc.dll                    efsui.exe                     efsutil.dll                  efswrt.dll
+EhStorAPI.dll                 EhStorAuthn.exe               EhStorPwdMgr.dll             EhStorShell.dll
+ejemplo.txt                   els.dll                       ELSCore.dll                  elshyph.dll
+elslad.dll                    elsTrans.dll                  EmailApis.dll                embeddedmodesvc.dll
+embeddedmodesvcapi.dll        EmojiDS.dll                   emptyregdb.dat               encapi.dll
+EncDump.dll                   energy.dll                    energyprov.dll               energytask.dll
+enrollmentapi.dll             EnterpriseAPNCsp.dll          EnterpriseAppMgmtClient.dll  EnterpriseAppMgmtSvc.dll
+enterprisecsps.dll            EnterpriseDesktopAppMgmtCS... enterpriseetw.dll            EnterpriseModernAppMgmtCS...
+enterpriseresourcemanager.dll eqossnap.dll                  ErrorDetails.dll             ErrorDetailsCore.dll
+es.dll                        EsdSip.dll                    esent.dll                    esentprf.dll
+esentutl.exe                  esevss.dll                    eShims.dll                   esrb.rs
+ETDCoInstaller15012.dll       ETDCoInstaller15017.dll       EthernetMediaManager.dll     ETWCoreUIComponentsResour...
+ETWESEProviderResources.dll   EtwRundown.dll                eudcedit.exe                 eUICCsCSP.dll
+EventAggregation.dll          eventcls.dll                  eventcreate.exe              EventViewer_EventDetails.xsl
+eventvwr.exe                  eventvwr.msc                  evr.dll                      ExecModelClient.dll
+execmodelproxy.dll            expand.exe                    ExplorerFrame.dll            ExSMime.dll
+extrac32.exe                  ExtrasXmlParser.dll           f3ahvoas.dll                 facecredentialprovider.dll
+FaceProcessor.dll             FaceProcessorCore.dll         FaceTrackerInternal.dll      Family.Authentication.dll
+Family.Cache.dll              Family.Client.dll             Family.SyncEngine.dll        FamilySafetyExt.dll
+Faultrep.dll                  FaxPrinterInstaller.dll       fc.exe                       fcon.dll
+fdBth.dll                     fdBthProxy.dll                FdDevQuery.dll               fde.dll
+fdeploy.dll                   fdPHost.dll                   fdPnp.dll                    fdprint.dll
+fdProxy.dll                   FDResPub.dll                  fdSSDP.dll                   fdWCN.dll
+fdWNet.dll                    fdWSD.dll                     FeatureToastBulldogImg.png   FeatureToastHeroImg.jpg
+feclient.dll                  ffbroker.dll                  fhcat.dll                    fhcfg.dll
+fhcleanup.dll                 fhcpl.dll                     fhengine.dll                 fhevents.dll
+fhlisten.dll                  fhmanagew.exe                 fhsettingsprovider.dll       fhshl.dll
+fhsrchapi.dll                 fhsrchph.dll                  fhsvc.dll                    fhsvcctl.dll
+fhtask.dll                    fhuxadapter.dll               fhuxapi.dll                  fhuxcommon.dll
+fhuxgraphics.dll              fhuxpresentation.dll          fidocredprov.dll             FileAppxStreamingDataSour...
+FileHistory.exe               filemgmt.dll                  FilmModeDetection.wmv        FilterDS.dll
+find.exe                      findnetprinters.dll           findstr.exe                  finger.exe
+fingerprintcredential.dll     Firewall.cpl                  FirewallAPI.dll              FirewallControlPanel.dll
+fixmapi.exe                   FlightSettings.dll            fltLib.dll                   fltMC.exe
+FluencyDS.dll                 fmapi.dll                     FMAPO64.dll                  fmifs.dll
+fms.dll                       FNTCACHE.DAT                  FntCache.dll                 fodhelper.exe
+Fondue.exe                    fontdrvhost.exe               fontext.dll                  FontGlyphAnimator.dll
+fontgroupsoverride.dll        FontProvider.dll              fontsub.dll                  fontview.exe
+forfiles.exe                  format.com                    fpb.rs                       fphc.dll
+framedyn.dll                  framedynos.dll                FrameServer.dll              frprov.dll
+fsavailux.exe                 FSClient.dll                  FsIso.exe                    fsmgmt.msc
+fsquirt.exe                   fsutil.exe                    fsutilext.dll                ftbusui.dll
+ftd2xx.dll                    fthsvc.dll                    FTLang.dll                   ftp.exe
+fundisc.dll                   fveapi.dll                    fveapibase.dll               fvecerts.dll
+fvecpl.dll                    fvenotify.exe                 fveskybackup.dll             fveui.dll
+fvewiz.dll                    fwbase.dll                    fwcfg.dll                    fwmdmcsp.dll
+fwpolicyiomgr.dll             FWPUCLNT.DLL                  FwRemoteSvr.dll              FXSAPI.dll
+FXSCOM.dll                    FXSCOMEX.dll                  FXSCOMPOSE.dll               FXSCOMPOSERES.dll
+FXSCOVER.exe                  FXSEVENT.dll                  FXSMON.dll                   FXSRESM.dll
+FXSROUTE.dll                  FXSST.dll                     FXSSVC.exe                   FXST30.dll
+FXSTIFF.dll                   FXSUNATD.exe                  FXSUTILITY.dll               g711codc.ax
+GameBarPresenceWriter.exe     GameBarPresenceWriter.prox... GameChatOverlayExt.dll       GameChatTranscription.dll
+gamemode.dll                  gamemonitor.dll               GamePanel.exe                GamePanelExternalHook.dll
+GameSystemToastIcon.contra... GameSystemToastIcon.png       gameux.dll                   gamingtcui.dll
+gatherNetworkInfo.vbs         gb2312.uce                    gcdef.dll                    gdi32.dll
+gdi32full.dll                 GdiPlus.dll                   generaltel.dll               GenValObj.exe
+Geocommon.dll                 Geolocation.dll               getmac.exe                   getuname.dll
+GfxResources.dll              GfxUIEx.exe                   Gfxv2_0.exe                  Gfxv2_0.exe.config
+Gfxv4_0.exe                   Gfxv4_0.exe.config            GfxValDisplayLog.bin         glmf32.dll
+GlobCollationHost.dll         globinputhost.dll             glu32.dll                    gmsaclient.dll
+gpapi.dll                     gpedit.dll                    gpprnext.dll                 gpresult.exe
+gpsvc.dll                     gptext.dll                    gpupdate.exe                 GraphicsCapture.dll
+GraphicsPerfSvc.dll           grb.rs                        Groupinghc.dll               grpconv.exe
+hal.dll                       HalExtIntcLpioDMA.dll         HalExtPL080.dll              HandwritingSystemToastIco...
+HandwritingSystemToastIcon... hascsp.dll                    HashtagDS.dll                hbaapi.dll
+hcproviders.dll               HdcpHandler.dll               hdwwiz.cpl                   hdwwiz.exe
+HeadphoneSystemToastIcon.c... HeadphoneSystemToastIcon.png  HeadsetSystemToastIcon.co... HeadsetSystemToastIcon.png
+HeadTrackerStorage.dll        HealthSystemToastIcon.cont... HealthSystemToastIcon.png    HeatCore.dll
+help.exe                      HelpPaneProxy.dll             hgcpl.dll                    hgprint.dll
+hhctrl.ocx                    hhsetup.dll                   hid.dll                      hidphone.tsp
+hidserv.dll                   hlink.dll                     hmkd.dll                     hnetcfg.dll
+HNetCfgClient.dll             hnetmon.dll                   HologramCompositor.dll       HolographicExtensions.dll
+HolographicRuntimes.dll       HoloShellRuntime.dll          HoloSHExtensions.dll         HoloSI.PCShell.dll
+HOSTNAME.EXE                  hotplug.dll                   HrtfApo.dll                  html.iec
+httpapi.dll                   httpprxc.dll                  httpprxm.dll                 httpprxp.dll
+HttpsDataSource.dll           htui.dll                      hvax64.exe                   hvhostsvc.dll
+hvix64.exe                    hvloader.dll                  HvSocket.dll                 Hydrogen.dll
+ias.dll                       iasacct.dll                   iasads.dll                   iasdatastore.dll
+iashlpr.dll                   IasMigPlugin.dll              iasnap.dll                   iaspolcy.dll
+iasrad.dll                    iasrecst.dll                  iassam.dll                   iassdo.dll
+iassvcs.dll                   ibtproppage.dll               ibtsiva.exe                  icacls.exe
+icfupgd.dll                   icm32.dll                     icmp.dll                     icmui.dll
+IconCodecService.dll          IcsEntitlementHost.exe        icsigd.dll                   icsunattend.exe
+icsvc.dll                     icsvcext.dll                  icuin.dll                    icuuc.dll
+IdCtrls.dll                   ideograf.uce                  IdListen.dll                 idndl.dll
+IDStore.dll                   ie4uinit.exe                  IEAdvpack.dll                ieapfltr.dll
+iedkcs32.dll                  ieframe.dll                   iemigplugin.dll              iepeers.dll
+ieproxy.dll                   iernonce.dll                  iertutil.dll                 iesetup.dll
+iesysprep.dll                 ieui.dll                      ieuinit.inf                  ieUnatt.exe
+iexpress.exe                  ifmon.dll                     ifsutil.dll                  ifsutilx.dll
+ig8icd64.dll                  igc64.dll                     igd10idpp64.dll              igd10iumd64.dll
+igd11dxva64.dll               igd12umd64.dll                igdail64.dll                 igdbcl64.dll
+igdclbif.bin                  igdde64.dll                   igdDiag.dll                  igdfcl64.dll
+igdmcl64.dll                  igdmd64.dll                   igdrcl64.dll                 igdumdim64.dll
+igdusc64.dll                  igfx11cmrt64.dll              igfxcmjit64.dll              igfxcmrt64.dll
+igfxCoIn_v4271.dll            igfxCoIn_v4642.dll            igfxCoIn_v4835.dll           igfxCPL.cpl
+igfxCUIService.exe            igfxCUIServicePS.dll          igfxDH.dll                   igfxDHLib.dll
+igfxDHLibv2_0.dll             igfxDI.dll                    igfxDILib.dll                igfxDILibv2_0.dll
+igfxDTCM.dll                  igfxEM.exe                    igfxEMLib.dll                igfxEMLibv2_0.dll
+igfxexps.dll                  igfxext.exe                   igfxHK.exe                   igfxLHM.dll
+igfxLHMLib.dll                igfxLHMLibv2_0.dll            igfxOSP.dll                  igfxSDK.exe
+igfxSDKLib.dll                igfxSDKLibv2_0.dll            igfxTray.exe                 iglhcp64.dll
+iglhsip64.dll                 iglhxa64.cpa                  iglhxa64.vp                  iglhxc64.vp
+iglhxc64_dev.vp               iglhxg64.vp                   iglhxg64_dev.vp              iglhxo64.vp
+iglhxo64_dev.vp               iglhxs64.vp                   IHDS.dll                     ihvrilproxy.dll
+IKEEXT.DLL                    imaadp32.acm                  imagehlp.dll                 imageres.dll
+imagesp1.dll                  ImageStabilization.wmv        imapi.dll                    imapi2.dll
+imapi2fs.dll                  imgutil.dll                   imm32.dll                    immersivetpmvscmgrsvr.exe
+ImplatSetup.dll               IndexedDbLegacy.dll           inetcomm.dll                 inetcpl.cpl
+inetmib1.dll                  inetpp.dll                    inetppui.dll                 INETRES.dll
+InfDefaultInstall.exe         InkEd.dll                     InkObjCore.dll               InprocLogger.dll
+input.dll                     InputController.dll           InputHost.dll                InputInjectionBroker.dll
+InputLocaleManager.dll        InputService.dll              InputSwitch.dll              InputSystemToastIcon.cont...
+InputSystemToastIcon.png      inseng.dll                    InstallService.dll           InstallServiceTasks.dll
+IntelCpHDCPSvc.exe            IntelOpenCL64.dll             IntelWiDiLogServer64.dll     IntelWiDiMCComp64.dll
+IntelWiDiUMS64.exe            IntelWiDiUtils64.dll          Intel_OpenCL_ICD64.dll       internetmail.dll
+InternetMailCsp.dll           intl.cpl                      invagent.dll                 iologmsg.dll
+ipconfig.exe                  IPELoggingDictationHelper.dll IPHLPAPI.DLL                 iphlpsvc.dll
+ipnathlp.dll                  IpNatHlpClient.dll            IPPMon.dll                   iprtprio.dll
+iprtrmgr.dll                  ipsecsnp.dll                  IPSECSVC.DLL                 ipsmsnap.dll
+ipxlatcfg.dll                 irclass.dll                   irftp.exe                    iri.dll
+irmon.dll                     irprops.cpl                   iscsicli.exe                 iscsicpl.dll
+iscsicpl.exe                  iscsidsc.dll                  iscsied.dll                  iscsiexe.dll
+iscsilog.dll                  iscsium.dll                   iscsiwmi.dll                 iscsiwmiv2.dll
+ISM.dll                       isoburn.exe                   itircl.dll                   itss.dll
+iuilp.dll                     iumbase.dll                   iumcrypt.dll                 iumdll.dll
+IumSdk.dll                    iwmssvc.dll                   iyuv_32.dll                  JavaScriptCollectionAgent...
+joinproviderol.dll            joinutil.dll                  joy.cpl                      JpMapControl.dll
+jpndecoder.dll                jpninputrouter.dll            jpnranker.dll                JpnServiceDS.dll
+jscript.dll                   jscript9.dll                  jscript9diag.dll             jsproxy.dll
+kanji_1.uce                   kanji_2.uce                   kbd101.dll                   kbd101a.dll
+kbd101b.dll                   kbd101c.dll                   kbd103.dll                   kbd106.dll
+kbd106n.dll                   KBDA1.DLL                     KBDA2.DLL                    KBDA3.DLL
+KBDAL.DLL                     KBDARME.DLL                   kbdarmph.dll                 kbdarmty.dll
+KBDARMW.DLL                   kbdax2.dll                    KBDAZE.DLL                   KBDAZEL.DLL
+KBDAZST.DLL                   KBDBASH.DLL                   KBDBE.DLL                    KBDBENE.DLL
+KBDBGPH.DLL                   KBDBGPH1.DLL                  KBDBHC.DLL                   KBDBLR.DLL
+KBDBR.DLL                     KBDBU.DLL                     KBDBUG.DLL                   KBDBULG.DLL
+KBDCA.DLL                     KBDCAN.DLL                    KBDCHER.DLL                  KBDCHERP.DLL
+KBDCR.DLL                     KBDCZ.DLL                     KBDCZ1.DLL                   KBDCZ2.DLL
+KBDDA.DLL                     KBDDIV1.DLL                   KBDDIV2.DLL                  KBDDV.DLL
+KBDDZO.DLL                    KBDES.DLL                     KBDEST.DLL                   KBDFA.DLL
+kbdfar.dll                    KBDFC.DLL                     KBDFI.DLL                    KBDFI1.DLL
+KBDFO.DLL                     KBDFR.DLL                     KBDFTHRK.DLL                 KBDGAE.DLL
+KBDGEO.DLL                    kbdgeoer.dll                  kbdgeome.dll                 kbdgeooa.dll
+kbdgeoqw.dll                  KBDGKL.DLL                    KBDGN.DLL                    KBDGR.DLL
+KBDGR1.DLL                    KBDGRLND.DLL                  KBDGTHC.DLL                  KBDHAU.DLL
+KBDHAW.DLL                    KBDHE.DLL                     KBDHE220.DLL                 KBDHE319.DLL
+KBDHEB.DLL                    kbdhebl3.dll                  KBDHELA2.DLL                 KBDHELA3.DLL
+KBDHEPT.DLL                   KBDHU.DLL                     KBDHU1.DLL                   kbdibm02.dll
+KBDIBO.DLL                    KBDIC.DLL                     KBDINASA.DLL                 KBDINBE1.DLL
+KBDINBE2.DLL                  KBDINBEN.DLL                  KBDINDEV.DLL                 KBDINEN.DLL
+KBDINGUJ.DLL                  KBDINHIN.DLL                  KBDINKAN.DLL                 KBDINMAL.DLL
+KBDINMAR.DLL                  KBDINORI.DLL                  KBDINPUN.DLL                 KBDINTAM.DLL
+KBDINTEL.DLL                  KBDINUK2.DLL                  KBDIR.DLL                    KBDIT.DLL
+KBDIT142.DLL                  KBDIULAT.DLL                  KBDJAV.DLL                   KBDJPN.DLL
+KBDKAZ.DLL                    KBDKHMR.DLL                   KBDKNI.DLL                   KBDKOR.DLL
+KBDKURD.DLL                   KBDKYR.DLL                    KBDLA.DLL                    KBDLAO.DLL
+kbdlisub.dll                  kbdlisus.dll                  kbdlk41a.dll                 KBDLT.DLL
+KBDLT1.DLL                    KBDLT2.DLL                    KBDLV.DLL                    KBDLV1.DLL
+KBDLVST.DLL                   KBDMAC.DLL                    KBDMACST.DLL                 KBDMAORI.DLL
+KBDMLT47.DLL                  KBDMLT48.DLL                  KBDMON.DLL                   KBDMONMO.DLL
+KBDMONST.DLL                  KBDMYAN.DLL                   KBDNE.DLL                    kbdnec.dll
+kbdnec95.dll                  kbdnecat.dll                  kbdnecnt.dll                 KBDNEPR.DLL
+kbdnko.dll                    KBDNO.DLL                     KBDNO1.DLL                   KBDNSO.DLL
+KBDNTL.DLL                    KBDOGHAM.DLL                  KBDOLCH.DLL                  KBDOLDIT.DLL
+KBDOSM.DLL                    KBDPASH.DLL                   kbdphags.dll                 KBDPL.DLL
+KBDPL1.DLL                    KBDPO.DLL                     KBDRO.DLL                    KBDROPR.DLL
+KBDROST.DLL                   KBDRU.DLL                     KBDRU1.DLL                   KBDRUM.DLL
+KBDSF.DLL                     KBDSG.DLL                     KBDSL.DLL                    KBDSL1.DLL
+KBDSMSFI.DLL                  KBDSMSNO.DLL                  KBDSN1.DLL                   KBDSORA.DLL
+KBDSOREX.DLL                  KBDSORS1.DLL                  KBDSORST.DLL                 KBDSP.DLL
+KBDSW.DLL                     KBDSW09.DLL                   KBDSYR1.DLL                  KBDSYR2.DLL
+KBDTAILE.DLL                  KBDTAJIK.DLL                  KBDTAM99.DLL                 KBDTAT.DLL
+KBDTH0.DLL                    KBDTH1.DLL                    KBDTH2.DLL                   KBDTH3.DLL
+KBDTIFI.DLL                   KBDTIFI2.DLL                  KBDTIPRC.DLL                 KBDTIPRD.DLL
+KBDTT102.DLL                  KBDTUF.DLL                    KBDTUQ.DLL                   KBDTURME.DLL
+KBDTZM.DLL                    KBDUGHR.DLL                   KBDUGHR1.DLL                 KBDUK.DLL
+KBDUKX.DLL                    KBDUR.DLL                     KBDUR1.DLL                   KBDURDU.DLL
+KBDUS.DLL                     KBDUSA.DLL                    KBDUSL.DLL                   KBDUSR.DLL
+KBDUSX.DLL                    KBDUZB.DLL                    KBDVNTC.DLL                  KBDWOL.DLL
+KBDYAK.DLL                    KBDYBA.DLL                    KBDYCC.DLL                   KBDYCL.DLL
+kd.dll                        kdcom.dll                     kdcpw.dll                    kdhvcom.dll
+kdnet.dll                     kdnet_uart16550.dll           KdsCli.dll                   kdstub.dll
+kdusb.dll                     kd_02_10df.dll                kd_02_10ec.dll               kd_02_1137.dll
+kd_02_14e4.dll                kd_02_15b3.dll                kd_02_1969.dll               kd_02_19a2.dll
+kd_02_1af4.dll                kd_02_8086.dll                kd_07_1415.dll               kd_0C_8086.dll
+keepaliveprovider.dll         KerbClientShared.dll          kerberos.dll                 kernel.appcore.dll
+kernel32.dll                  KernelBase.dll                KeyboardSystemToastIcon.c... KeyboardSystemToastIcon.png
+KeyCredMgr.dll                keyiso.dll                    keymgr.dll                   KeywordDetectorMsftSidAda...
+klist.exe                     kmddsp.tsp                    KnobsCore.dll                KnobsCsp.dll
+korean.uce                    ksetup.exe                    ksproxy.ax                   kstvtune.ax
+ksuser.dll                    Kswdmcap.ax                   ksxbar.ax                    ktmutil.exe
+ktmw32.dll                    l2gpstore.dll                 l2nacp.dll                   L2SecHC.dll
+l3codeca.acm                  l3codecp.acm                  label.exe                    LangCleanupSysprepAction.dll
+LanguageComponentsInstalle... LanguageComponentsInstalle... LanguageOverlayServer.dll    LanguageOverlayUtil.dll
+LAPRXY.DLL                    LaptopPlugInToastImg.gif      LargeRoom.bin                LaunchTM.exe
+LaunchWinApp.exe              lcphrase.tbl                  lcptr.tbl                    LegacyNetUX.dll
+LegacyNetUXHost.exe           lfsvc.dll                     libcrypto.dll                license.rtf
+LicenseManager.dll            LicenseManagerApi.dll         LicenseManagerShellext.exe   LicenseManagerSvc.dll
+LicensingCSP.dll              licensingdiag.exe             LicensingDiagSpp.dll         LicensingUI.exe
+LicensingWinRT.dll            licmgr10.dll                  linkinfo.dll                 ListSvc.dll
+lltdapi.dll                   lltdres.dll                   lltdsvc.dll                  lmhsvc.dll
+loadperf.dll                  locale.nls                    localsec.dll                 localspl.dll
+localui.dll                   LocationApi.dll               LocationFramework.dll        LocationFrameworkInternal...
+LocationFrameworkPS.dll       LocationNotificationWindow... LocationWinPalMisc.dll       Locator.exe
+LockAppBroker.dll             LockAppHost.exe               LockController.dll           LockHostingFramework.dll
+LockScreenContent.dll         LockScreenContentHost.dll     LockScreenContentServer.exe  LockScreenData.dll
+lodctr.exe                    logagent.exe                  loghours.dll                 logman.exe
+logoncli.dll                  LogonController.dll           LogonUI.exe                  lpasvc.dll
+lpk.dll                       lpkinstall.exe                lpksetup.exe                 lpksetupproxyserv.dll
+lpremove.exe                  LsaIso.exe                    lsasrv.dll                   lsass.exe
+lsm.dll                       lsmproxy.dll                  luainstall.dll               luiapi.dll
+lusrmgr.msc                   lz32.dll                      l_intl.nls                   Magnification.dll
+Magnify.exe                   main.cpl                      MaintenanceUI.dll            makecab.exe
+manage-bde.exe                MapConfiguration.dll          MapControlCore.dll           MapControlStringsRes.dll
+MapGeocoder.dll               mapi32.dll                    mapistub.dll                 MapRouter.dll
+MapsBtSvc.dll                 MapsBtSvcProxy.dll            MapsCSP.dll                  MapsStore.dll
+MapsTelemetry.dll             mapstoasttask.dll             mapsupdatetask.dll           MbaeApi.dll
+MbaeApiPublic.dll             MbaeParserTask.exe            MbaeXmlParser.dll            mblctr.exe
+MBMediaManager.dll            MBR2GPT.EXE                   mbsmsapi.dll                 mbussdapi.dll
+mcbuilder.exe                 MCCSEngineShared.dll          MCCSPal.dll                  mciavi32.dll
+mcicda.dll                    mciqtz32.dll                  mciseq.dll                   mciwave.dll
+MCRecvSrc.dll                 mcupdate_AuthenticAMD.dll     mcupdate_GenuineIntel.dll    MDEServer.exe
+MDMAgent.exe                  MDMAppInstaller.exe           MdmCommon.dll                MdmDiagnostics.dll
+MdmDiagnosticsTool.exe        mdminst.dll                   mdmlocalmanagement.dll       mdmmigrator.dll
+mdmpostprocessevaluator.dll   mdmregistration.dll           MdRes.exe                    MdSched.exe
+MediaFoundation.DefaultPer... MediaSystemToastIcon.contr... MediaSystemToastIcon.png     MediumRoom.bin
+MemoryDiagnostic.dll          MessagingDataModel2.dll       MessagingService.dll         MetroIntelGenericUIFramew...
+mf.dll                        mf3216.dll                    mfAACEnc.dll                 mfasfsrcsnk.dll
+mfaudiocnv.dll                mfc100.dll                    mfc100chs.dll                mfc100cht.dll
+mfc100deu.dll                 mfc100enu.dll                 mfc100esn.dll                mfc100fra.dll
+mfc100ita.dll                 mfc100jpn.dll                 mfc100kor.dll                mfc100rus.dll
+mfc100u.dll                   mfc110.dll                    mfc110chs.dll                mfc110cht.dll
+mfc110deu.dll                 mfc110enu.dll                 mfc110esn.dll                mfc110fra.dll
+mfc110ita.dll                 mfc110jpn.dll                 mfc110kor.dll                mfc110rus.dll
+mfc110u.dll                   mfc120.dll                    mfc120chs.dll                mfc120cht.dll
+mfc120deu.dll                 mfc120enu.dll                 mfc120esn.dll                mfc120fra.dll
+mfc120ita.dll                 mfc120jpn.dll                 mfc120kor.dll                mfc120rus.dll
+mfc120u.dll                   mfc140.dll                    mfc140chs.dll                mfc140cht.dll
+mfc140deu.dll                 mfc140enu.dll                 mfc140esn.dll                mfc140fra.dll
+mfc140ita.dll                 mfc140jpn.dll                 mfc140kor.dll                mfc140rus.dll
+mfc140u.dll                   mfc42.dll                     mfc42u.dll                   MFCaptureEngine.dll
+mfcm100.dll                   mfcm100u.dll                  mfcm110.dll                  mfcm110u.dll
+mfcm120.dll                   mfcm120u.dll                  mfcm140.dll                  mfcm140u.dll
+mfcore.dll                    mfcsubs.dll                   mfds.dll                     mfdvdec.dll
+mferror.dll                   mfh263enc.dll                 mfh264enc.dll                mfksproxy.dll
+MFMediaEngine.dll             mfmjpegdec.dll                mfmkvsrcsnk.dll              mfmp4srcsnk.dll
+mfmpeg2srcsnk.dll             mfnetcore.dll                 mfnetsrc.dll                 mfperfhelper.dll
+mfplat.dll                    MFPlay.dll                    mfpmp.exe                    mfps.dll
+mfreadwrite.dll               mfsensorgroup.dll             mfsrcsnk.dll                 mfsvr.dll
+mftranscode.dll               mfvdsp.dll                    mfvfw.dll                    MFWMAAEC.DLL
+mgmtapi.dll                   mgmtrefreshcredprov.dll       mi.dll                       mibincodec.dll
+Microsoft-Windows-AppModel... microsoft-windows-battery-... microsoft-windows-hal-eve... Microsoft-Windows-Interna...
+microsoft-windows-kernel-p... microsoft-windows-kernel-p... microsoft-windows-kernel-... Microsoft-Windows-MapCont...
+Microsoft-Windows-MosHost.dll Microsoft-Windows-MosTrace... microsoft-windows-pdc.dll    microsoft-windows-power-c...
+microsoft-windows-processo... microsoft-windows-sleepstu... microsoft-windows-storage... microsoft-windows-system-...
+Microsoft-WindowsPhone-SEM... Microsoft.Bluetooth.Proxy.dll Microsoft.Bluetooth.Servi... Microsoft.Bluetooth.UserS...
+Microsoft.Management.Infra... MicrosoftAccountCloudAP.dll   MicrosoftAccountExtension... MicrosoftAccountTokenProv...
+MicrosoftAccountWAMExtensi... MicrosoftEdgeSH.exe           midimap.dll                  migisol.dll
+miguiresource.dll             mimefilt.dll                  mimofcodec.dll               MinstoreEvents.dll
+mintdh.dll                    MiracastInputMgr.dll          MiracastReceiver.dll         MirrorDrvCompat.dll
+mispace.dll                   MitigationConfiguration.dll   miutils.dll                  MixedReality.Broker.dll
+MixedRealityCapture.Broker... MixedRealityCapture.Pipeli... mlang.dat                    mlang.dll
+mmc.exe                       mmc.exe.config                mmcbase.dll                  mmci.dll
+mmcico.dll                    mmcndmgr.dll                  mmcshext.dll                 MMDevAPI.dll
+mmgaclient.dll                mmgaproxystub.dll             mmgaserver.exe               mmres.dll
+mmsys.cpl                     mobilenetworking.dll          mobsync.exe                  mode.com
+modemui.dll                   modernexecserver.dll          more.com                     moricons.dll
+mos.dll                       moshost.dll                   MosHostClient.dll            moshostcore.dll
+MosResource.dll               MosStorage.dll                mountvol.exe                 MouseSystemToastIcon.cont...
+MouseSystemToastIcon.png      MP3DMOD.DLL                   MP43DECD.DLL                 MP4SDECD.DLL
+Mpeg2Data.ax                  mpeval.dll                    mpg2splt.ax                  MPG4DECD.DLL
+mpnotify.exe                  mpr.dll                       mprapi.dll                   mprddm.dll
+mprdim.dll                    mprext.dll                    mprmsg.dll                   MpSigStub.exe
+MPSSVC.dll                    mpunits.dll                   MRINFO.EXE                   MrmCoreR.dll
+MrmDeploy.dll                 MrmIndexer.dll                MRT-KB890830.exe             MRT.exe
+mrt100.dll                    mrt_map.dll                   ms3dthumbnailprovider.dll    msaatext.dll
+MSAC3ENC.DLL                  msacm32.dll                   msacm32.drv                  msadp32.acm
+msafd.dll                     MSAJApi.dll                   MSAlacDecoder.dll            MSAlacEncoder.dll
+MSAMRNBDecoder.dll            MSAMRNBEncoder.dll            MSAMRNBSink.dll              MSAMRNBSource.dll
+MsApoFxProxy.dll              MSAProfileNotificationHand... msasn1.dll                   MSAudDecMFT.dll
+msaudite.dll                  msauserext.dll                mscandui.dll                 mscat32.dll
+MSchedExe.exe                 msclmd.dll                    mscms.dll                    msconfig.exe
+mscoree.dll                   mscorier.dll                  mscories.dll                 msctf.dll
+msctfime.ime                  MsCtfMonitor.dll              msctfp.dll                   msctfui.dll
+msctfuimanager.dll            msdadiag.dll                  msdart.dll                   msdatsrc.tlb
+msdelta.dll                   msdmo.dll                     msdrm.dll                    msdt.exe
+msdtc.exe                     msdtckrm.dll                  msdtclog.dll                 msdtcprx.dll
+msdtctm.dll                   msdtcuiu.dll                  msdtcVSp1res.dll             MSDvbNP.ax
+msdxm.ocx                     msdxm.tlb                     msfeeds.dll                  msfeedsbs.dll
+msfeedssync.exe               MSFlacDecoder.dll             MSFlacEncoder.dll            msftedit.dll
+MsftOemDllIgneous.dll         msg711.acm                    msgsm32.acm                  MSHEIF.dll
+mshta.exe                     mshtml.dll                    mshtml.tlb                   MshtmlDac.dll
+mshtmled.dll                  mshtmler.dll                  msi.dll                      MsiCofire.dll
+msidcrl40.dll                 msident.dll                   msidle.dll                   msidntld.dll
+msieftp.dll                   msiexec.exe                   msihnd.dll                   msiltcfg.dll
+msimg32.dll                   msimsg.dll                    msimtf.dll                   msinfo32.exe
+msisip.dll                    msIso.dll                     msiwer.dll                   mskeyprotcli.dll
+mskeyprotect.dll              msls31.dll                    msmpeg2adec.dll              MSMPEG2ENC.DLL
+msmpeg2vdec.dll               MSNP.ax                       msobjs.dll                   msoert2.dll
+MSOpusDecoder.dll             mspaint.exe                   mspatcha.dll                 mspatchc.dll
+MSPhotography.dll             msports.dll                   msprivs.dll                  msra.exe
+msrahc.dll                    MsraLegacy.tlb                msrating.dll                 msrdc.dll
+MsRdpWebAccess.dll            msrle32.dll                   msscntrs.dll                 mssign32.dll
+mssip32.dll                   mssitlb.dll                   MsSpellCheckingFacility.dll  MsSpellCheckingHost.exe
+mssph.dll                     mssprxy.dll                   mssrch.dll                   mssvp.dll
+mstask.dll                    msTextPrediction.dll          mstsc.exe                    mstscax.dll
+msutb.dll                     msv1_0.dll                    msvcirt.dll                  msvcp100.dll
+msvcp110.dll                  msvcp110_win.dll              msvcp120.dll                 msvcp120_clr0400.dll
+msvcp140.dll                  msvcp140_1.dll                msvcp140_2.dll               msvcp140_clr0400.dll
+msvcp140_codecvt_ids.dll      msvcp60.dll                   msvcp_win.dll                msvcr100.dll
+msvcr100_clr0400.dll          msvcr110.dll                  msvcr120.dll                 msvcr120_clr0400.dll
+msvcrt.dll                    msvfw32.dll                   msvidc32.dll                 MSVidCtl.dll
+MSVideoDSP.dll                MSVP9DEC.dll                  msvproc.dll                  MSVPXENC.dll
+MSWB7.dll                     mswmdm.dll                    mswsock.dll                  msxml3.dll
+msxml3r.dll                   msxml6.dll                    msxml6r.dll                  msyuv.dll
+MtcModel.dll                  MTF.dll                       MTFAppServiceDS.dll          MtfDecoder.dll
+MTFFuzzyDS.dll                MTFServer.dll                 MTFSpellcheckDS.dll          mtstocom.exe
+mtxclu.dll                    mtxdm.dll                     mtxex.dll                    mtxoci.dll
+muifontsetup.dll              MUILanguageCleanup.dll        MuiUnattend.exe              MultiDigiMon.exe
+musdialoghandlers.dll         MusNotification.exe           MusNotificationUx.exe        MusNotifyIcon.exe
+MusUpdateHandlers.dll         mycomput.dll                  mydocs.dll                   Mystify.scr
+NAPCRYPT.DLL                  NapiNSP.dll                   Narrator.exe                 nativemap.dll
+NaturalAuth.dll               NaturalAuthClient.dll         NaturalLanguage6.dll         navshutdown.dll
+nbtstat.exe                   NcaApi.dll                    NcaSvc.dll                   ncbservice.dll
+NcdAutoSetup.dll              NcdProp.dll                   nci.dll                      ncobjapi.dll
+ncpa.cpl                      ncrypt.dll                    ncryptprov.dll               ncryptsslp.dll
+ncsi.dll                      ncuprov.dll                   ndadmin.exe                  nddeapi.dll
+ndfapi.dll                    ndfetw.dll                    NdfEventView.xml             ndfhcdiscovery.dll
+ndishc.dll                    ndproxystub.dll               nduprov.dll                  negoexts.dll
+net.exe                       net1.exe                      netapi32.dll                 netbios.dll
+netbtugc.exe                  NetCellcoreCellManagerProv... netcenter.dll                netcfg.exe
+NetCfgNotifyObjectHost.exe    netcfgx.dll                   netcorehc.dll                netdiagfx.dll
+NetDriverInstall.dll          netevent.dll                  NetEvtFwdr.exe               netfxperf.dll
+neth.dll                      NetHost.exe                   netid.dll                    netiohlp.dll
+netiougc.exe                  netjoin.dll                   netlogon.dll                 netman.dll
+netmsg.dll                    netplwiz.dll                  Netplwiz.exe                 netprofm.dll
+netprofmsvc.dll               netprovfw.dll                 netprovisionsp.dll           netrtwlanu.cat
+netrtwlanu.inf                NetSetupApi.dll               NetSetupEngine.dll           NetSetupMig.log
+NetSetupShim.dll              NetSetupSvc.dll               netsh.exe                    netshell.dll
+NETSTAT.EXE                   nettrace.dll                  NetTrace.PLA.Diagnostics.xml netutils.dll
+NetworkBindingEngineMigPlu... NetworkCollectionAgent.dll    NetworkDesktopSettings.dll   networkexplorer.dll
+networkhelper.dll             networkitemfactory.dll        NetworkMobileSettings.dll    NetworkProxyCsp.dll
+NetworkStatus.dll             NetworkUXBroker.dll           netwphelper.dll              Netwuw04.dll
+newdev.dll                    newdev.exe                    NFCProvisioningPlugin.dll    NfcRadioMedia.dll
+ngccredprov.dll               NgcCtnr.dll                   NgcCtnrGidsHandler.dll       NgcCtnrSvc.dll
+NgcIso.exe                    NgcIsoCtnr.dll                ngckeyenum.dll               ngcksp.dll
+ngclocal.dll                  ngcpopkeysrv.dll              NgcProCsp.dll                ngcrecovery.dll
+ngcsvc.dll                    ngctasks.dll                  ninput.dll                   nlaapi.dll
+nlahc.dll                     nlasvc.dll                    nlhtml.dll                   nlmgp.dll
+nlmproxy.dll                  nlmsprep.dll                  nlsbres.dll                  NlsData0000.dll
+NlsData000a.dll               Nlsdl.dll                     NlsLexicons000a.dll          nltest.exe
+NMAA.dll                      NmaDirect.dll                 NOISE.DAT                    normaliz.dll
+normidna.nls                  normnfc.nls                   normnfd.nls                  normnfkc.nls
+normnfkd.nls                  notepad.exe                   NotificationController.dll   NotificationControllerPS.dll
+notificationplatformcompon... npmproxy.dll                  NPSM.dll                     NPSMDesktopProvider.dll
+nrpsrv.dll                    nshhttp.dll                   nshipsec.dll                 nshwfp.dll
+nsi.dll                       nsisvc.dll                    nslookup.exe                 ntasn1.dll
+ntdll.dll                     ntdsapi.dll                   ntlanman.dll                 ntlanui2.dll
+NtlmShared.dll                ntmarta.dll                   ntoskrnl.exe                 ntprint.dll
+ntprint.exe                   ntshrui.dll                   ntvdm64.dll                  objsel.dll
+occache.dll                   ocsetapi.dll                  odbc32.dll                   odbcad32.exe
+odbcbcp.dll                   odbcconf.dll                  odbcconf.exe                 odbcconf.rsp
+odbccp32.dll                  odbccr32.dll                  odbccu32.dll                 odbcint.dll
+odbctrac.dll                  OEMDefaultAssociations.xml    oemlicense.dll               ofdeploy.exe
+offfilt.dll                   officecsp.dll                 offlinelsa.dll               offlinesam.dll
+offreg.dll                    oflc-nz.rs                    OkDone_80.contrast-black.png OkDone_80.contrast-white.png
+OkDone_80.png                 ole32.dll                     oleacc.dll                   oleacchooks.dll
+oleaccrc.dll                  oleaut32.dll                  oledlg.dll                   oleprn.dll
+OmaDmAgent.dll                omadmapi.dll                  omadmclient.exe              omadmprc.exe
+OnDemandBrokerClient.dll      OnDemandConnRouteHelper.dll   OneBackupHandler.dll         OneCoreCommonProxyStub.dll
+OneCoreUAPCommonProxyStub.dll OneDriveSettingSyncProvide... onex.dll                     onexui.dll
+OobeFldr.dll                  OpcServices.dll               OpenCL.DLL                   openfiles.exe
+opengl32.dll                  OpenWith.exe                  OptionalFeatures.exe         ortcengine.dll
+osbaseln.dll                  osk.exe                       OskSupport.dll               osuninst.dll
+OutdoorAudioEnvironment.bin   P2P.dll                       P2PGraph.dll                 p2pnetsh.dll
+p2psvc.dll                    PackagedCWALauncher.exe       packager.dll                 PackageStateRoaming.dll
+panmap.dll                    PasswordOnWakeSettingFlyou... PATHPING.EXE                 pautoenr.dll
+PayloadRestrictions.dll       PaymentMediatorServiceProx... pcacli.dll                   pcadm.dll
+pcaevts.dll                   pcalua.exe                    pcasvc.dll                   pcaui.dll
+pcaui.exe                     pcbp.rs                       pcl.sep                      PCPKsp.dll
+PCShellCommonProxyStub.dll    pcsvDevice.dll                pcwrun.exe                   pcwum.dll
+pcwutl.dll                    pdh.dll                       pdhui.dll                    pegi-pt.rs
+pegi.rs                       PeopleAPIs.dll                PeopleBand.dll               PerceptionSimulation.Prox...
+PerceptionSimulationDevice... PerceptionSimulationExtens... PerceptionSimulationInput... PerceptionSimulationManag...
+perfc009.dat                  perfc00A.dat                  perfctrs.dll                 perfd009.dat
+perfd00A.dat                  perfdisk.dll                  perfh009.dat                 perfh00A.dat
+perfi009.dat                  perfi00A.dat                  perfmon.exe                  perfmon.msc
+perfnet.dll                   perfos.dll                    perfproc.dll                 PerfStringBackup.INI
+perftrack.dll                 perfts.dll                    PersonalizationCSP.dll       PersonaX.dll
+phoneactivate.exe             PhoneCallHistoryApis.dll      PhoneDataSync.dll            PhoneOm.dll
+PhonePlatformAbstraction.dll  PhoneProviders.dll            PhoneService.dll             PhoneServiceRes.dll
+PhoneSystemToastIcon.contr... PhoneSystemToastIcon.png      Phoneutil.dll                PhoneutilRes.dll
+PhotoMetadataHandler.dll      PhotoScreensaver.scr          photowiz.dll                 PickerHost.exe
+PickerPlatform.dll            pid.dll                       pidgenx.dll                  pifmgr.dll
+PimIndexMaintenance.dll       PimIndexMaintenanceClient.dll Pimstore.dll                 PinEnrollmentBroker.exe
+PinEnrollmentHelper.dll       PING.EXE                      pkeyhelper.dll               PkgMgr.exe
+pku2u.dll                     pla.dll                       plasrv.exe                   playlistfolder.dll
+PlaySndSrv.dll                PlayToDevice.dll              PlayToManager.dll            playtomenu.dll
+PlayToReceiver.dll            PlayToStatusProvider.dll      ploptin.dll                  pngfilt.dll
+pnidui.dll                    pnpclean.dll                  pnppolicy.dll                pnpts.dll
+pnpui.dll                     PnPUnattend.exe               pnputil.exe                  PNPXAssoc.dll
+PNPXAssocPrx.dll              pnrpauto.dll                  Pnrphc.dll                   pnrpnsp.dll
+pnrpsvc.dll                   policymanager.dll             policymanagerprecheck.dll    polstore.dll
+poqexec.exe                   PortableDeviceApi.dll         PortableDeviceClassExtens... PortableDeviceConnectApi.dll
+PortableDeviceStatus.dll      PortableDeviceSyncProvider... PortableDeviceTypes.dll      PortableDeviceWiaCompat.dll
+POSyncServices.dll            pots.dll                      powercfg.cpl                 powercfg.exe
+powercpl.dll                  powrprof.dll                  prauthproviders.dll          PresentationCFFRasterizer...
+PresentationHost.exe          PresentationHostProxy.dll     PresentationNative_v0300.dll prevhost.exe
+prflbmsg.dll                  print.exe                     Print.Workflow.Source.dll    printfilterpipelineprxy.dll
+printfilterpipelinesvc.exe    PrintIsolationHost.exe        PrintIsolationProxy.dll      PrintPlatformConfig.dll
+PrintRenderAPIHost.DLL        printui.dll                   printui.exe                  PrintWorkflowProxy.dll
+PrintWorkflowService.dll      PrintWSDAHost.dll             prncache.dll                 prnfldr.dll
+prnntfy.dll                   prntvpt.dll                   ProductEnumerator.dll        profapi.dll
+profext.dll                   profprov.dll                  profsvc.dll                  profsvcext.dll
+propsys.dll                   proquota.exe                  provcore.dll                 provdatastore.dll
+provdiagnostics.dll           provengine.dll                provhandlers.dll             provisioningcommandscsp.dll
+provisioningcsp.dll           ProvisioningHandlers.dll      provlaunch.exe               provmigrate.dll
+provops.dll                   provpackageapidll.dll         provplatformdesktop.dll      ProvPluginEng.dll
+provsvc.dll                   ProvSysprep.dll               provthrd.dll                 provtool.exe
+ProximityCommon.dll           ProximityCommonPal.dll        ProximityRtapiPal.dll        ProximityService.dll
+ProximityServicePal.dll       ProximityUxHost.exe           prproc.exe                   prvdmofcomp.dll
+psapi.dll                     pscript.sep                   PSHED.DLL                    psisdecd.dll
+psisrndr.ax                   PSModuleDiscoveryProvider.dll psmodulediscoveryprovider... PsmServiceExtHost.dll
+psmsrv.dll                    psr.exe                       pstask.dll                   pstorec.dll
+puiapi.dll                    puiobj.dll                    PushToInstall.dll            pwlauncher.dll
+pwlauncher.exe                pwrshplugin.dll               pwsso.dll                    qasf.dll
+qcap.dll                      qdv.dll                       qdvd.dll                     qedit.dll
+qedwipes.dll                  qmgr.dll                      quartz.dll                   Query.dll
+QuickActionsDataModel.dll     quickassist.exe               QuietHours.dll               qwave.dll
+RacEngn.dll                   racpldlg.dll                  radardt.dll                  radarrs.dll
+RADCUI.dll                    rasadhlp.dll                  rasapi32.dll                 rasauto.dll
+rasautou.exe                  raschap.dll                   raschapext.dll               rasctrnm.h
+rasctrs.dll                   rascustom.dll                 rasdiag.dll                  rasdial.exe
+rasdlg.dll                    raserver.exe                  rasgcw.dll                   rasman.dll
+rasmans.dll                   rasmbmgr.dll                  RasMediaManager.dll          RASMM.dll
+rasmontr.dll                  rasphone.exe                  rasplap.dll                  rasppp.dll
+rastapi.dll                   rastls.dll                    rastlsext.dll                rdbui.dll
+rdpbase.dll                   rdpcfgex.dll                  rdpclip.exe                  rdpcore.dll
+rdpcorets.dll                 rdpencom.dll                  rdpendp.dll                  rdpinput.exe
+RdpRelayTransport.dll         RdpSa.exe                     RdpSaProxy.exe               RdpSaPs.dll
+RdpSaUacHelper.exe            rdpserverbase.dll             rdpudd.dll                   rdrleakdiag.exe
+RDSAppXHelper.dll             rdsdwmdr.dll                  RDSPnf.exe                   rdvvmtransport.dll
+RDXService.dll                RDXTaskFactory.dll            ReAgent.dll                  ReAgentc.exe
+ReAgentTask.dll               recdisc.exe                   recover.exe                  recovery.dll
+RecoveryDrive.exe             refsutil.exe                  reg.exe                      regapi.dll
+RegCtrl.dll                   regedt32.exe                  regidle.dll                  regini.exe
+Register-CimProvider.exe      regsvc.dll                    regsvr32.exe                 reguwpapi.dll
+ReInfo.dll                    rekeywiz.exe                  relog.exe                    RelPost.exe
+remoteaudioendpoint.dll       remotepg.dll                  RemotePosWorker.exe          remotesp.tsp
+RemoteSystemToastIcon.cont... RemoteSystemToastIcon.png     RemoteWipeCSP.dll            RemovableMediaProvisionin...
+RemoveDeviceContextHandler... RemoveDeviceElevated.dll      rendezvousSession.tlb        repair-bde.exe
+replace.exe                   ReportingCSP.dll              RESAMPLEDMO.DLL              reseteng.dll
+ResetEngine.dll               ResetEngine.exe               ResetEngOnline.dll           resmon.exe
+ResourcePolicyClient.dll      ResourcePolicyServer.dll      ResPriHMImageList            ResPriImageList
+RestartManager.mof            RestartManagerUninstall.mof   RestartNowPower_80.contra... RestartNowPower_80.contra...
+RestartNowPower_80.png        RestartTonight_80.png         RestartTonight_80_contras... RestartTonight_80_contras...
+resutils.dll                  rgb9rast.dll                  Ribbons.scr                  riched20.dll
+riched32.dll                  rilproxy.dll                  RjvMDMConfig.dll             RMActivate.exe
+RMActivate_isv.exe            RMActivate_ssp.exe            RMActivate_ssp_isv.exe       RMapi.dll
+rmclient.dll                  RmClient.exe                  RMSRoamingSecurity.dll       rmttpmvscmgrsvr.exe
+rnr20.dll                     RoamingSecurity.dll           Robocopy.exe                 rometadata.dll
+RotMgr.dll                    ROUTE.EXE                     RpcEpMap.dll                 rpchttp.dll
+RpcNs4.dll                    rpcnsh.dll                    RpcPing.exe                  rpcrt4.dll
+RpcRtRemote.dll               rpcss.dll                     rrinstaller.exe              rsaenh.dll
+rshx32.dll                    rsnp2uvc.dll                  RstrtMgr.dll                 rstrui.exe
+RtCRX64.dll                   rtffilt.dll                   rtm.dll                      rtmcodecs.dll
+RTMediaFrame.dll              rtmmvrortc.dll                rtmpal.dll                   rtmpltfm.dll
+RtNicProp64.dll               rtutils.dll                   rtwlanu.sys                  RTWorkQ.dll
+RuleBasedDS.dll               runas.exe                     rundll32.exe                 runexehelper.exe
+RunLegacyCPLElevated.exe      runonce.exe                   RuntimeBroker.exe            SafeIPs64.dll
+samcli.dll                    samlib.dll                    samsrv.dll                   sas.dll
+sbe.dll                       sbeio.dll                     sberes.dll                   sbservicetrigger.dll
+sc.exe                        scansetting.dll               SCardBi.dll                  SCardDlg.dll
+SCardSvr.dll                  ScavengeSpace.xml             scavengeui.dll               ScDeviceEnum.dll
+scecli.dll                    scesrv.dll                    schannel.dll                 schedcli.dll
+schedsvc.dll                  ScheduleTime_80.contrast-b... ScheduleTime_80.contrast-... ScheduleTime_80.png
+schtasks.exe                  scksp.dll                     scripto.dll                  scrnsave.scr
+scrobj.dll                    scrrun.dll                    sdbinst.exe                  sdchange.exe
+sdclt.exe                     sdcpl.dll                     SDDS.dll                     sdengin2.dll
+SDFHost.dll                   sdhcinst.dll                  sdiageng.dll                 sdiagnhost.exe
+sdiagprv.dll                  sdiagschd.dll                 sdohlp.dll                   sdrsvc.dll
+sdshext.dll                   Search.ProtocolHandler.MAP... SearchFilterHost.exe         SearchFolder.dll
+SearchIndexer.exe             SearchProtocolHost.exe        SebBackgroundManagerPolic... SecConfig.efi
+SecEdit.exe                   sechost.dll                   secinit.exe                  seclogon.dll
+secproc.dll                   secproc_isv.dll               secproc_ssp.dll              secproc_ssp_isv.dll
+secur32.dll                   securekernel.exe              SecureTimeAggregator.dll     security.dll
+SecurityAndMaintenance.png    SecurityAndMaintenance_Ale... SecurityAndMaintenance_Er... SecurityCenterBroker.dll
+SecurityCenterBrokerPS.dll    SecurityHealthAgent.dll       SecurityHealthProxyStub.dll  SecurityHealthService.exe
+SecurityHealthSSO.dll         SEMgrPS.dll                   SEMgrSvc.dll                 SEMgrSvcPAL.dll
+sendmail.dll                  Sens.dll                      SensApi.dll                  SensorCustomAdbAlgorithm.dll
+SensorDataService.exe         SensorPerformanceEvents.dll   SensorsApi.dll               SensorsClassExtension.dll
+SensorsCpl.dll                SensorService.dll             SensorsNativeApi.dll         SensorsNativeApi.V2.dll
+SensorsUtilsV2.dll            sensrsvc.dll                  serialui.dll                 services.exe
+services.msc                  serwvdrv.dll                  SessEnv.dll                  sessionmsg.exe
+setbcdlocale.dll              sethc.exe                     SetNetworkLocation.dll       SetNetworkLocationFlyout.dll
+SetProxyCredential.dll        setspn.exe                    SettingMonitor.dll           settings.dat
+SettingsEnvironment.Deskto... SettingsExtensibilityHandl... SettingsHandlers_AnalogSh... SettingsHandlers_AppContr...
+SettingsHandlers_AppExecut... SettingsHandlers_Backgroun... SettingsHandlers_BatteryU... SettingsHandlers_Capabili...
+SettingsHandlers_ClosedCap... SettingsHandlers_ContentDe... SettingsHandlers_Cortana.dll SettingsHandlers_Devices.dll
+SettingsHandlers_Display.dll  SettingsHandlers_Flights.dll  SettingsHandlers_Fonts.dll   SettingsHandlers_Gaming.dll
+SettingsHandlers_Geolocati... SettingsHandlers_Gpu.dll      SettingsHandlers_HoloLens... SettingsHandlers_InputPer...
+SettingsHandlers_ManagePho... SettingsHandlers_Maps.dll     SettingsHandlers_Notifica... SettingsHandlers_nt.dll
+SettingsHandlers_OneCore_B... SettingsHandlers_PCDisplay... SettingsHandlers_Pen.dll     SettingsHandlers_Privacy.dll
+SettingsHandlers_QuickActi... SettingsHandlers_SharedExp... SettingsHandlers_SignInOp... SettingsHandlers_SIUF.dll
+SettingsHandlers_SpeechPri... SettingsHandlers_Startup.dll  SettingsHandlers_StorageS... SettingsHandlers_Troubles...
+SettingsHandlers_User.dll     SettingsHandlers_UserAccou... SettingsHandlers_WorkAcce... SettingSync.dll
+SettingSyncCore.dll           SettingSyncHost.exe           SettingSyncPolicy.dll        setupapi.dll
+setupcl.exe                   setupcln.dll                  setupetw.dll                 setupugc.exe
+setx.exe                      sfc.dll                       sfc.exe                      sfc_os.dll
+SgrmBroker.exe                SgrmClientApi.dll             SgrmEnclave.dll              SgrmEnclave_secure.dll
+shacct.dll                    shacctprofile.dll             SharedPCCSP.dll              SharedRealitySvc.dll
+SharedStartModel.dll          SharedStartModelShim.dll      ShareHost.dll                sharemediacpl.dll
+SHCore.dll                    shdocvw.dll                   shell32.dll                  ShellCommonCommonProxyStu...
+shellstyle.dll                shfolder.dll                  shgina.dll                   ShiftJIS.uce
+shimeng.dll                   shimgvw.dll                   shlwapi.dll                  shpafact.dll
+shrpubw.exe                   shsetup.dll                   shsvcs.dll                   shunimpl.dll
+shutdown.exe                  shutdownext.dll               shutdownux.dll               shwebsvc.dll
+signdrv.dll                   sigverif.exe                  SIHClient.exe                sihost.exe
+SimAuth.dll                   SimCfg.dll                    simpdata.tlb                 skci.dll
+slc.dll                       slcext.dll                    SlideToShutDown.exe          slmgr.vbs
+slr100.dll                    slui.exe                      slwga.dll                    SmallRoom.bin
+SmartCardBackgroundPolicy.dll SmartcardCredentialProvide... SmartCardSimulator.dll       smartscreen.exe
+smartscreenps.dll             SMBHelperClass.dll            smbwmiv2.dll                 SmiEngine.dll
+smphost.dll                   SmsDeviceAccessRevocation.dll SMSRouter.dll                SmsRouterSvc.dll
+smss.exe                      SndVol.exe                    SndVolSSO.dll                SnippingTool.exe
+snmpapi.dll                   snmptrap.exe                  Snooze_80.contrast-black.png Snooze_80.contrast-white.png
+Snooze_80.png                 socialapis.dll                softkbd.dll                  softpub.dll
+sort.exe                      SortServer2003Compat.dll      SortWindows61.dll            SortWindows6Compat.dll
+SpaceAgent.exe                spacebridge.dll               SpaceControl.dll             spaceman.exe
+SpatializerApo.dll            SpatialStore.dll              spbcd.dll                    SpeakersSystemToastIcon.c...
+SpeakersSystemToastIcon.png   Spectrum.exe                  SpectrumSyncClient.dll       SpeechPal.dll
+spfileq.dll                   spinf.dll                     spmpm.dll                    spnet.dll
+spoolss.dll                   spoolsv.exe                   spopk.dll                    spp.dll
+sppc.dll                      sppcext.dll                   sppcomapi.dll                sppcommdlg.dll
+SppExtComObj.Exe              sppinst.dll                   sppnp.dll                    sppobjs.dll
+sppsvc.exe                    sppwinob.dll                  sppwmi.dll                   spwinsat.dll
+spwizeng.dll                  spwizimg.dll                  spwizres.dll                 spwmp.dll
+sqlcecompact40.dll            sqlceoledb40.dll              sqlceqp40.dll                sqlcese40.dll
+sqlsrv32.dll                  sqlsrv32.rll                  sqmapi.dll                   srchadmin.dll
+srclient.dll                  srcore.dll                    srdelayed.exe                SrEvents.dll
+SRH.dll                       srhelper.dll                  srms-apr.dat                 srms.dat
+srpapi.dll                    srrstr.dll                    SrTasks.exe                  srumapi.dll
+srumsvc.dll                   srvcli.dll                    srvsvc.dll                   srwmi.dll
+sscore.dll                    sscoreext.dll                 ssdm.dll                     ssdpapi.dll
+ssdpsrv.dll                   sspicli.dll                   sspisrv.dll                  SSShim.dll
+ssText3d.scr                  sstpsvc.dll                   StartTileData.dll            Startupscan.dll
+StateRepository.Core.dll      StaticDictDS.dll              stclient.dll                 stdole2.tlb
+stdole32.tlb                  sti.dll                       sti_ci.dll                   stobject.dll
+StorageContextHandler.dll     StorageUsage.dll              storagewmi.dll               storagewmi_passthru.dll
+stordiag.exe                  storewuauth.dll               Storprop.dll                 StorSvc.dll
+streamci.dll                  StructuredQuery.dll           SubRange.uce                 subst.exe
+sud.dll                       svchost.exe                   svf.dll                      svsvc.dll
+SwitcherDataModel.dll         swprv.dll                     sxproxy.dll                  sxs.dll
+sxshared.dll                  sxssrv.dll                    sxsstore.dll                 sxstrace.exe
+SyncCenter.dll                SyncController.dll            SyncHost.exe                 SyncHostps.dll
+SyncInfrastructure.dll        SyncInfrastructureps.dll      SyncProxy.dll                Syncreg.dll
+SyncRes.dll                   SyncSettings.dll              syncutil.dll                 sysclass.dll
+sysdm.cpl                     SysFxUI.dll                   sysmain.dll                  sysmon.ocx
+sysntfy.dll                   sysprint.sep                  sysprtj.sep                  SysResetErr.exe
+syssetup.dll                  systemcpl.dll                 SystemEventsBrokerClient.dll SystemEventsBrokerServer.dll
+systeminfo.exe                SystemPropertiesAdvanced.exe  SystemPropertiesComputerN... SystemPropertiesDataExecu...
+SystemPropertiesHardware.exe  SystemPropertiesPerformanc... SystemPropertiesProtectio... SystemPropertiesRemote.exe
+systemreset.exe               SystemSettings.DataModel.dll  SystemSettings.DeviceEncr... SystemSettings.Handlers.dll
+SystemSettings.SettingsExt... SystemSettings.UserAccount... SystemSettingsAdminFlows.exe SystemSettingsBroker.exe
+SystemSettingsRemoveDevice... SystemSettingsThresholdAdm... SystemSupportInfo.dll        SystemUWPLauncher.exe
+systray.exe                   t2embed.dll                   Tabbtn.dll                   TabbtnEx.dll
+tabcal.exe                    TabletPC.cpl                  TabSvc.dll                   takeown.exe
+tapi3.dll                     tapi32.dll                    tapilua.dll                  TapiMigPlugin.dll
+tapiperf.dll                  tapisrv.dll                   TapiSysprep.dll              tapiui.dll
+TapiUnattend.exe              tar.exe                       TaskApis.dll                 taskbarcpl.dll
+taskcomp.dll                  TaskFlowDataEngine.dll        taskhostw.exe                taskkill.exe
+tasklist.exe                  Taskmgr.exe                   taskschd.dll                 taskschd.msc
+TaskSchdPS.dll                tbauth.dll                    tbs.dll                      tcblaunch.exe
+tcbres.wim                    tcmsetup.exe                  tcpbidi.xml                  tcpipcfg.dll
+tcpmib.dll                    tcpmon.dll                    tcpmon.ini                   tcpmonui.dll
+TCPSVCS.EXE                   tdc.ocx                       tdh.dll                      TDLMigration.dll
+telephon.cpl                  TelephonyInteractiveUser.dll  TelephonyInteractiveUserR... TempSignedLicenseExchange...
+termmgr.dll                   termsrv.dll                   tetheringclient.dll          tetheringconfigsp.dll
+TetheringIeProvider.dll       TetheringMgr.dll              tetheringservice.dll         TetheringStation.dll
+TextInputFramework.dll        themecpl.dll                  themeservice.dll             themeui.dll
+threadpoolwinrt.dll           thumbcache.dll                ThumbnailExtractionHost.exe  tier2punctuations.dll
+TieringEngineProxy.dll        TieringEngineService.exe      TileDataRepository.dll       TimeBrokerClient.dll
+TimeBrokerServer.dll          timedate.cpl                  TimeDateMUICallback.dll      timeout.exe
+TimeSyncTask.dll              tlscsp.dll                    tokenbinding.dll             TokenBroker.dll
+TokenBrokerCookies.exe        TokenBrokerUI.dll             tpm.msc                      TpmCertResources.dll
+tpmcompc.dll                  TpmCoreProvisioning.dll       TpmInit.exe                  TpmTasks.dll
+tpmvsc.dll                    tpmvscmgr.exe                 tpmvscmgrsvr.exe             tquery.dll
+tracerpt.exe                  TRACERT.EXE                   traffic.dll                  TransformPPSToWlan.xslt
+TransformPPSToWlanCredenti... TransliterationRanker.dll     tree.com                     trie.dll
+trkwks.dll                    TrustedSignalCredProv.dll     tsbyuv.dll                   tsgqec.dll
+tsmf.dll                      TSpkg.dll                     TSSessionUX.dll              TSTheme.exe
+TsUsbGDCoInstaller.dll        TsUsbRedirectionGroupPolic... TSWbPrxy.exe                 TSWorkspace.dll
+TsWpfWrp.exe                  TtlsAuth.dll                  TtlsCfg.dll                  TtlsExt.dll
+tvratings.dll                 twext.dll                     twinapi.appcore.dll          twinapi.dll
+twinui.appcore.dll            twinui.dll                    twinui.pcshell.dll           txflog.dll
+txfw32.dll                    typeperf.exe                  tzautoupdate.dll             tzres.dll
+tzsync.exe                    tzsyncres.dll                 tzutil.exe                   ubpm.dll
+UCI64A119.DLL                 ucmhc.dll                     ucrtbase.dll                 ucrtbase_clr0400.dll
+ucrtbase_enclave.dll          ucsvc.exe                     udhisapi.dll                 uDWM.dll
+UefiCsp.dll                   uexfat.dll                    ufat.dll                     UiaManager.dll
+UIAnimation.dll               UIAutomationCore.dll          uicom.dll                    UIManagerBrokerps.dll
+UIMgrBroker.exe               uireng.dll                    UIRibbon.dll                 UIRibbonRes.dll
+ulib.dll                      umb.dll                       umdmxfrm.dll                 umpnpmgr.dll
+umpo-overrides.dll            umpo.dll                      umpoext.dll                  umpowmi.dll
+umrdp.dll                     unattend.dll                  unenrollhook.dll             unimdm.tsp
+unimdmat.dll                  uniplat.dll                   Unistore.dll                 unlodctr.exe
+unregmp2.exe                  untfs.dll                     UpdateAgent.dll              updatecsp.dll
+updatehandlers.dll            updatepolicy.dll              upfc.exe                     UpgradeResultsUI.exe
+upnp.dll                      upnpcont.exe                  upnphost.dll                 uReFS.dll
+uReFSv1.dll                   ureg.dll                      url.dll                      urlmon.dll
+UsbCApi.dll                   usbceip.dll                   usbmon.dll                   usbperf.dll
+UsbPmApi.dll                  UsbSettingsHandlers.dll       UsbTask.dll                  usbui.dll
+user32.dll                    UserAccountBroker.exe         UserAccountControlSetting... UserAccountControlSetting...
+useractivitybroker.dll        usercpl.dll                   UserDataAccessRes.dll        UserDataAccountApis.dll
+UserDataLanguageUtil.dll      UserDataPlatformHelperUtil... UserDataService.dll          UserDataTimeUtil.dll
+UserDataTypeHelperUtil.dll    UserDeviceRegistration.dll    UserDeviceRegistration.Ng... userenv.dll
+userinit.exe                  userinitext.dll               UserLanguageProfileCallba... UserLanguagesCpl.dll
+usermgr.dll                   usermgrcli.dll                UserMgrProxy.dll             usk.rs
+usoapi.dll                    UsoClient.exe                 usocore.dll                  usp10.dll
+ustprov.dll                   utcutil.dll                   utildll.dll                  Utilman.exe
+uudf.dll                      UvcModel.dll                  UXInit.dll                   uxlib.dll
+uxlibres.dll                  uxtheme.dll                   vac.dll                      VAN.dll
+Vault.dll                     vaultcli.dll                  VaultCmd.exe                 VaultRoaming.dll
+vaultsvc.dll                  VBICodec.ax                   vbisurf.ax                   vbsapi.dll
+vbscript.dll                  vcamp110.dll                  vcamp120.dll                 vcamp140.dll
+VCardParser.dll               vccorlib110.dll               vccorlib120.dll              vccorlib140.dll
+vcomp100.dll                  vcomp110.dll                  vcomp120.dll                 vcomp140.dll
+vcruntime140.dll              vcruntime140_1.dll            vcruntime140_clr0400.dll     vds.exe
+vdsbas.dll                    vdsdyn.dll                    vdsldr.exe                   vdsutil.dll
+vdsvd.dll                     vds_ps.dll                    verclsid.exe                 verifier.dll
+verifier.exe                  verifiergui.exe               version.dll                  vertdll.dll
+vfuprov.dll                   vfwwdm32.dll                  vidcap.ax                    VideoHandlers.dll
+VIDRESZR.DLL                  virtdisk.dll                  VmApplicationHealthMonito... vmbuspipe.dll
+vmictimeprovider.dll          vmrdvcore.dll                 VocabRoamingHandler.dll      VoiceActivationManager.dll
+VoipRT.dll                    vpncmd.exe                    vpnike.dll                   vpnikeapi.dll
+VpnSohDesktop.dll             VPNv2CSP.dll                  VscMgrPS.dll                 vsnp2uvc.dll
+vssadmin.exe                  vssapi.dll                    vsstrace.dll                 VSSVC.exe
+vss_ps.dll                    w32time.dll                   w32tm.exe                    w32topl.dll
+WaaSAssessment.dll            WaaSMedicPS.dll               WaaSMedicSvc.dll             WABSyncProvider.dll
+waitfor.exe                   WalletBackgroundServicePro... WalletProxy.dll              WalletService.dll
+WallpaperHost.exe             wavemsp.dll                   wbadmin.exe                  wbemcomn.dll
+wbengine.exe                  wbiosrvc.dll                  wcimage.dll                  wcl.dll
+wclEtw.dll                    wclPowrProf.dll               wclSqm.dll                   wclUnicode.dll
+wclWdi.dll                    wcmapi.dll                    wcmcsp.dll                   wcmsvc.dll
+WcnApi.dll                    wcncsvc.dll                   WcnEapAuthProxy.dll          WcnEapPeerProxy.dll
+WcnNetsh.dll                  wcnwiz.dll                    wc_storage.dll               wdc.dll
+WdfCoInstaller01011.dll       wdi.dll                       wdigest.dll                  wdmaud.drv
+wdscore.dll                   WdsUnattendTemplate.xml       WEB.rs                       webauthn.dll
+WebCache.exe                  WebcamUi.dll                  webcheck.dll                 WebClnt.dll
+webio.dll                     webplatstorageserver.dll      WebRuntimeManager.dll        webservices.dll
+Websocket.dll                 wecapi.dll                    wecsvc.dll                   wecutil.exe
+wephostsvc.dll                wer.dll                       werconcpl.dll                wercplsupport.dll
+werdiagcontroller.dll         weretw.dll                    WerFault.exe                 WerFaultSecure.exe
+wermgr.exe                    wersvc.dll                    werui.dll                    wevtapi.dll
+wevtfwd.dll                   wevtsvc.dll                   wevtutil.exe                 wextract.exe
+WF.msc                        wfapigp.dll                   wfdprov.dll                  WFDSConMgr.dll
+WFDSConMgrSvc.dll             WfHC.dll                      WFS.exe                      WFSR.dll
+whealogr.dll                  where.exe                     whhelper.dll                 whoami.exe
+wiaacmgr.exe                  wiaaut.dll                    wiadefui.dll                 wiadss.dll
+WiaExtensionHost64.dll        wiarpc.dll                    wiascanprofiles.dll          wiaservc.dll
+wiashext.dll                  wiatrace.dll                  wiawow64.exe                 WiFiConfigSP.dll
+wificonnapi.dll               WiFiDisplay.dll               wifinetworkmanager.dll       wifiprofilessettinghandle...
+wifitask.exe                  WimBootCompress.ini           wimgapi.dll                  wimserv.exe
+win32appinventorycsp.dll      win32k.sys                    win32kbase.sys               win32kfull.sys
+win32spl.dll                  win32u.dll                    Win32_DeviceGuard.dll        winbio.dll
+WinBioDataModel.dll           WinBioDataModelOOBE.exe       winbioext.dll                winbrand.dll
+wincorlib.dll                 wincredprovider.dll           wincredui.dll                WindowManagement.dll
+Windows.AccountsControl.dll   Windows.AI.MachineLearning... Windows.ApplicationModel.... Windows.ApplicationModel....
+Windows.ApplicationModel.C... windows.applicationmodel.d... Windows.ApplicationModel.dll Windows.ApplicationModel....
+Windows.ApplicationModel.S... Windows.ApplicationModel.S... Windows.ApplicationModel.... Windows.CloudDomainJoinAU...
+Windows.CloudStore.dll        Windows.CloudStore.Schema.... Windows.CloudStore.Schema... Windows.Cortana.Analog.dll
+Windows.Cortana.Analog.Pro... Windows.Cortana.Desktop.dll   Windows.Cortana.OneCore.dll  Windows.Cortana.PAL.Deskt...
+Windows.Cortana.ProxyStub.dll Windows.Data.Activities.dll   Windows.Data.Pdf.dll         Windows.Devices.AllJoyn.dll
+Windows.Devices.Background... Windows.Devices.Background... Windows.Devices.Bluetooth... Windows.Devices.Custom.dll
+Windows.Devices.Custom.ps.dll Windows.Devices.Enumeratio... Windows.Devices.Haptics.dll  Windows.Devices.HumanInte...
+Windows.Devices.Lights.dll    Windows.Devices.LowLevel.dll  Windows.Devices.Midi.dll     Windows.Devices.Perceptio...
+Windows.Devices.Picker.dll    Windows.Devices.PointOfSer... Windows.Devices.Portable.dll Windows.Devices.Printers.dll
+Windows.Devices.Printers.E... Windows.Devices.Radios.dll    Windows.Devices.Scanners.dll Windows.Devices.Sensors.dll
+Windows.Devices.SerialComm... Windows.Devices.SmartCards... Windows.Devices.SmartCard... Windows.Devices.Usb.dll
+Windows.Devices.WiFi.dll      Windows.Devices.WiFiDirect... Windows.Energy.dll           Windows.Gaming.Input.dll
+Windows.Gaming.Preview.dll    Windows.Gaming.UI.GameBar.dll Windows.Gaming.XboxLive.S... Windows.Globalization.dll
+Windows.Globalization.Font... Windows.Globalization.Phon... Windows.Graphics.Display.... Windows.Graphics.Display....
+Windows.Graphics.dll          Windows.Graphics.Printing.... Windows.Graphics.Printing... Windows.Graphics.Printing...
+Windows.Graphics.Printing.... Windows.Help.Runtime.dll      windows.immersiveshell.se... Windows.Internal.Adaptive...
+Windows.Internal.Bluetooth... Windows.Internal.CapturePi... Windows.Internal.CaptureP... Windows.Internal.Feedback...
+Windows.Internal.Feedback.... Windows.Internal.Graphics.... Windows.Internal.Manageme... Windows.Internal.Platform...
+Windows.Internal.PlatformE... Windows.Internal.Predictio... Windows.Internal.Security... Windows.Internal.Shell.Br...
+windows.internal.shellcomm... windows.internal.shellcomm... Windows.Internal.ShellCom... windows.internal.shellcom...
+Windows.Internal.ShellComm... windows.internal.shellcomm... windows.internal.shellcom... windows.internal.shellcom...
+Windows.Internal.Signals.dll  Windows.Internal.UI.BioEnr... Windows.Internal.UI.Logon... Windows.Management.Provis...
+Windows.Management.Workpla... Windows.Management.Workpla... Windows.Media.Audio.dll      Windows.Media.BackgroundM...
+Windows.Media.BackgroundPl... Windows.Media.Devices.dll     Windows.Media.dll            Windows.Media.Editing.dll
+Windows.Media.FaceAnalysis... Windows.Media.Import.dll      Windows.Media.MediaContro... Windows.Media.MixedRealit...
+Windows.Media.Ocr.dll         Windows.Media.Playback.Bac... Windows.Media.Playback.Me... Windows.Media.Playback.Pr...
+Windows.Media.Protection.P... Windows.Media.Renewal.dll     Windows.Media.Speech.dll     Windows.Media.Speech.UXRe...
+Windows.Media.Streaming.dll   Windows.Media.Streaming.ps... Windows.Mirage.dll           Windows.Mirage.Internal.C...
+Windows.Mirage.Internal.dll   Windows.Networking.Backgro... Windows.Networking.Backgr... Windows.Networking.Backgr...
+Windows.Networking.Connect... Windows.Networking.dll        Windows.Networking.HostNa... Windows.Networking.Networ...
+Windows.Networking.Network... Windows.Networking.Proximi... Windows.Networking.Servic... Windows.Networking.Socket...
+Windows.Networking.UX.EapR... Windows.Networking.Vpn.dll    Windows.Networking.XboxLi... Windows.Payments.dll
+Windows.Perception.Stub.dll   Windows.Security.Authentic... Windows.Security.Authenti... Windows.Security.Authenti...
+Windows.Security.Credentia... Windows.Security.Credentia... Windows.Services.Targeted... Windows.SharedPC.AccountM...
+Windows.SharedPC.Credentia... Windows.Shell.BlueLightRed... Windows.Shell.Search.UriH... Windows.Shell.ServiceHost...
+Windows.Shell.StartLayoutP... Windows.StateRepository.dll   Windows.StateRepositoryBr... Windows.StateRepositoryCl...
+Windows.StateRepositoryCor... Windows.StateRepositoryPS.dll Windows.StateRepositoryUp... Windows.Storage.Applicati...
+Windows.Storage.Compressio... windows.storage.dll           Windows.Storage.OneCore.dll  Windows.Storage.Search.dll
+Windows.System.Diagnostics... Windows.System.Diagnostics... Windows.System.Diagnostic... Windows.System.Launcher.dll
+Windows.System.Profile.Har... Windows.System.Profile.Pla... Windows.System.Profile.Re... Windows.System.Profile.Sy...
+Windows.System.Profile.Sys... Windows.System.RemoteDeskt... Windows.System.SystemMana... Windows.System.UserDevice...
+Windows.System.UserProfile... Windows.UI.AppDefaults.dll    Windows.UI.BioFeedback.dll   Windows.UI.BlockedShutdow...
+Windows.UI.Core.TextInput.dll Windows.UI.Cred.dll           Windows.UI.CredDialogCont... Windows.UI.dll
+Windows.UI.Immersive.dll      Windows.UI.Input.Inking.An... Windows.UI.Input.Inking.dll  Windows.UI.Logon.dll
+Windows.UI.NetworkUXContro... Windows.UI.PicturePassword... Windows.UI.Search.dll        Windows.UI.Shell.dll
+Windows.UI.Storage.dll        Windows.UI.Xaml.Controls.dll  Windows.UI.Xaml.dll          Windows.UI.Xaml.InkContro...
+Windows.UI.Xaml.Maps.dll      Windows.UI.Xaml.Phone.dll     Windows.UI.Xaml.Resources... Windows.UI.Xaml.Resources...
+Windows.UI.Xaml.Resources.... Windows.UI.Xaml.Resources.... Windows.UI.Xaml.Resources... Windows.UI.Xaml.Resources...
+Windows.UI.Xaml.Resources.... Windows.UI.Xaml.Resources.... Windows.UI.XamlHost.dll      Windows.WARP.JITService.dll
+Windows.WARP.JITService.exe   Windows.Web.Diagnostics.dll   Windows.Web.dll              Windows.Web.Http.dll
+WindowsAccessBridge-64.dll    WindowsActionDialog.exe       WindowsCodecs.dll            WindowsCodecsExt.dll
+WindowsCodecsRaw.dll          WindowsCodecsRaw.txt          WindowsDefaultHeatProcess... WindowsInternal.Composabl...
+windowslivelogin.dll          windowsperformancerecorder... WindowsUpdateElevatedInst... winethc.dll
+WinFax.dll                    winhttp.dll                   winhttpcom.dll               WinHvEmulation.dll
+WinHvPlatform.dll             wininet.dll                   wininetlui.dll               wininit.exe
+wininitext.dll                winipcfile.dll                winipcsecproc.dll            winipsec.dll
+winjson.dll                   Winlangdb.dll                 winload.efi                  winload.exe
+winlogon.exe                  winlogonext.dll               winmde.dll                   winml.dll
+winmm.dll                     winmmbase.dll                 winmsipc.dll                 WinMsoIrmProtector.dll
+winnlsres.dll                 winnsi.dll                    WinOpcIrmProtector.dll       winresume.efi
+winresume.exe                 winrm.cmd                     winrm.vbs                    winrnr.dll
+winrs.exe                     winrscmd.dll                  winrshost.exe                winrsmgr.dll
+winrssrv.dll                  WinRtTracing.dll              WinSAT.exe                   WinSATAPI.dll
+WinSCard.dll                  WinSetupUI.dll                winshfhc.dll                 winsku.dll
+winsockhc.dll                 winspool.drv                  winsqlite3.dll               WINSRPC.DLL
+winsrv.dll                    winsrvext.dll                 winsta.dll                   WinSync.dll
+WinSyncMetastore.dll          WinSyncProviders.dll          wintrust.dll                 WinTypes.dll
+winusb.dll                    winver.exe                    wisp.dll                     witnesswmiv2provider.dll
+wkscli.dll                    wkspbroker.exe                wkspbrokerAx.dll             wksprt.exe
+wksprtPS.dll                  wkssvc.dll                    wlanapi.dll                  wlancfg.dll
+WLanConn.dll                  wlandlg.dll                   wlanext.exe                  wlangpui.dll
+WLanHC.dll                    wlanhlp.dll                   WlanMediaManager.dll         WlanMM.dll
+wlanmsm.dll                   wlanpref.dll                  WlanRadioManager.dll         wlansec.dll
+wlansvc.dll                   wlansvcpal.dll                wlanui.dll                   wlanutil.dll
+Wldap32.dll                   wldp.dll                      wlgpclnt.dll                 wlidcli.dll
+wlidcredprov.dll              wlidfdp.dll                   wlidnsp.dll                  wlidprov.dll
+wlidres.dll                   wlidsvc.dll                   wlihvui.dll                  wlrmdr.exe
+WMADMOD.DLL                   WMADMOE.DLL                   WMALFXGFXDSP.dll             WMASF.DLL
+wmcodecdspps.dll              wmdmlog.dll                   wmdmps.dll                   wmdrmsdk.dll
+wmerror.dll                   wmi.dll                       wmiclnt.dll                  wmicmiplugin.dll
+wmidcom.dll                   wmidx.dll                     WmiMgmt.msc                  wmiprop.dll
+wmitomi.dll                   WMNetMgr.dll                  wmp.dll                      WMPDMC.exe
+WmpDui.dll                    wmpdxm.dll                    wmpeffects.dll               WMPhoto.dll
+wmploc.DLL                    wmpps.dll                     wmpshell.dll                 wmsgapi.dll
+WMSPDMOD.DLL                  WMSPDMOE.DLL                  WMVCORE.DLL                  WMVDECOD.DLL
+wmvdspa.dll                   WMVENCOD.DLL                  WMVSDECD.DLL                 WMVSENCD.DLL
+WMVXENCD.DLL                  WofTasks.dll                  WofUtil.dll                  WordBreakers.dll
+WorkFolders.exe               WorkfoldersControl.dll        WorkFoldersGPExt.dll         WorkFoldersRes.dll
+WorkFoldersShell.dll          workfolderssvc.dll            wow64.dll                    wow64cpu.dll
+wow64win.dll                  wowreg32.exe                  WpAXHolder.dll               wpbcreds.dll
+Wpc.dll                       WpcApi.dll                    WpcDesktopMonSvc.dll         WpcMon.exe
+wpcmon.png                    WpcRefreshTask.dll            WpcTok.exe                   WpcWebFilter.dll
+wpdbusenum.dll                WpdMtp.dll                    WpdMtpUS.dll                 wpdshext.dll
+WPDShextAutoplay.exe          WPDShServiceObj.dll           WPDSp.dll                    wpd_ci.dll
+wpnapps.dll                   wpnclient.dll                 wpncore.dll                  wpninprc.dll
+wpnpinst.exe                  wpnprv.dll                    wpnservice.dll               wpnsruprov.dll
+WpnUserService.dll            WpPortingLibrary.dll          WppRecorderUM.dll            wpr.config.xml
+wpr.exe                       WPTaskScheduler.dll           wpx.dll                      write.exe
+ws2help.dll                   ws2_32.dll                    wscadminui.exe               wscapi.dll
+wscinterop.dll                wscisvif.dll                  WSClient.dll                 WSCollect.exe
+wscproxystub.dll              wscript.exe                   wscsvc.dll                   wscui.cpl
+WSDApi.dll                    wsdchngr.dll                  WSDMon.dll                   WSDPrintProxy.DLL
+WSDScanProxy.dll              wsecedit.dll                  wsepno.dll                   wshbth.dll
+wshcon.dll                    wshelper.dll                  wshext.dll                   wshhyperv.dll
+wship6.dll                    wshirda.dll                   wshom.ocx                    wshqos.dll
+wshrm.dll                     WSHTCPIP.DLL                  wshunix.dll                  wslapi.dll
+WsmAgent.dll                  wsmanconfig_schema.xml        WSManHTTPConfig.exe          WSManMigrationPlugin.dll
+WsmAuto.dll                   wsmplpxy.dll                  wsmprovhost.exe              WsmPty.xsl
+WsmRes.dll                    WsmSvc.dll                    WsmTxt.xsl                   WsmWmiPl.dll
+wsnmp32.dll                   wsock32.dll                   wsplib.dll                   wsp_fs.dll
+wsp_health.dll                wsp_sr.dll                    wsqmcons.exe                 WSReset.exe
+WSTPager.ax                   wtsapi32.dll                  wuapi.dll                    wuapihost.exe
+wuauclt.exe                   wuaueng.dll                   wuceffects.dll               WUDFCoinstaller.dll
+WUDFCompanionHost.exe         WUDFHost.exe                  WUDFPlatform.dll             WudfSMCClassExt.dll
+WUDFx.dll                     WUDFx02000.dll                wudriver.dll                 wups.dll
+wups2.dll                     wusa.exe                      wuuhext.dll                  wuuhosdeployment.dll
+wvc.dll                       WwaApi.dll                    WwaExt.dll                   WWAHost.exe
+WWanAPI.dll                   wwancfg.dll                   wwanconn.dll                 WWanHC.dll
+wwanmm.dll                    Wwanpref.dll                  wwanprotdim.dll              WwanRadioManager.dll
+wwansvc.dll                   wwapi.dll                     x3daudio1_0.dll              x3daudio1_1.dll
+X3DAudio1_2.dll               X3DAudio1_3.dll               X3DAudio1_4.dll              X3DAudio1_5.dll
+X3DAudio1_6.dll               X3DAudio1_7.dll               xactengine2_0.dll            xactengine2_1.dll
+xactengine2_10.dll            xactengine2_2.dll             xactengine2_3.dll            xactengine2_4.dll
+xactengine2_5.dll             xactengine2_6.dll             xactengine2_7.dll            xactengine2_8.dll
+xactengine2_9.dll             xactengine3_0.dll             xactengine3_1.dll            xactengine3_2.dll
+xactengine3_3.dll             xactengine3_4.dll             xactengine3_5.dll            xactengine3_6.dll
+xactengine3_7.dll             XamlTileRender.dll            XAPOFX1_0.dll                XAPOFX1_1.dll
+XAPOFX1_2.dll                 XAPOFX1_3.dll                 XAPOFX1_4.dll                XAPOFX1_5.dll
+XAudio2_0.dll                 XAudio2_1.dll                 XAudio2_2.dll                XAudio2_3.dll
+XAudio2_4.dll                 XAudio2_5.dll                 XAudio2_6.dll                XAudio2_7.dll
+XAudio2_8.dll                 XAudio2_9.dll                 xbgmengine.dll               xbgmsvc.exe
+XblAuthManager.dll            XblAuthManagerProxy.dll       XblAuthTokenBrokerExt.dll    XblGameSave.dll
+XblGameSaveExt.dll            XblGameSaveProxy.dll          XblGameSaveTask.exe          XboxGipRadioManager.dll
+xboxgipsvc.dll                xboxgipsynthetic.dll          XboxNetApiSvc.dll            xcopy.exe
+xinput1_1.dll                 xinput1_2.dll                 xinput1_3.dll                XInput1_4.dll
+XInput9_1_0.dll               XInputUap.dll                 xmlfilter.dll                xmllite.dll
+xmlprovi.dll                  xolehlp.dll                   XpsDocumentTargetPrint.dll   XpsFilt.dll
+XpsGdiConverter.dll           XpsPrint.dll                  XpsRasterService.dll         xpsrchvw.exe
+xpsrchvw.xml                  xpsservices.dll               XPSSHHDR.dll                 xwizard.dtd
+xwizard.exe                   xwizards.dll                  xwreg.dll                    xwtpdui.dll
+xwtpw32.dll                   zipcontainer.dll              zipfldr.dll                  ztrace_maps.dll
+{A6D608F0-0BDE-491A-97AE-5... {EC94D02F-D200-4428-9531-0...
+
+
+PS C:\WINDOWS\system32> ls C:\Windows | where -filter {$_.Name -like '*.exe'} | fl name, versionInfo,@{n='Tamaño';e={$_.Length}}
+
+
+Name        : bfsvc.exe
+VersionInfo : File:             C:\Windows\bfsvc.exe
+              InternalName:     bfsvc.exe
+              OriginalFilename: bfsvc.exe.mui
+              FileVersion:      10.0.17134.1363 (WinBuild.160101.0800)
+              FileDescription:  Utilidad de servicio de actualización del archivo de arranque
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17134.1363
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamaño      : 67072
+
+Name        : explorer.exe
+VersionInfo : File:             C:\Windows\explorer.exe
+              InternalName:     explorer
+              OriginalFilename: EXPLORER.EXE.MUI
+              FileVersion:      10.0.17134.1363 (WinBuild.160101.0800)
+              FileDescription:  Explorador de Windows
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17134.1363
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamaño      : 4103224
+
+Name        : HelpPane.exe
+VersionInfo : File:             C:\Windows\HelpPane.exe
+              InternalName:     HelpPane.exe
+              OriginalFilename: HelpPane.exe.mui
+              FileVersion:      10.0.17134.1363 (WinBuild.160101.0800)
+              FileDescription:  Ayuda y soporte técnico de Microsoft
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17134.1363
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamaño      : 1060864
+
+Name        : hh.exe
+VersionInfo : File:             C:\Windows\hh.exe
+              InternalName:     HH 1.41
+              OriginalFilename: HH.exe.mui
+              FileVersion:      10.0.17134.1363 (WinBuild.160101.0800)
+              FileDescription:  Archivo ejecutable de ayuda HTML de Microsoft®
+              Product:          Ayuda de HTML
+              ProductVersion:   10.0.17134.1363
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamaño      : 17920
+
+Name        : notepad.exe
+VersionInfo : File:             C:\Windows\notepad.exe
+              InternalName:     Notepad
+              OriginalFilename: NOTEPAD.EXE.MUI
+              FileVersion:      10.0.17134.1363 (WinBuild.160101.0800)
+              FileDescription:  Bloc de notas
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17134.1363
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamaño      : 245760
+
+Name        : regedit.exe
+VersionInfo : File:             C:\Windows\regedit.exe
+              InternalName:     REGEDIT
+              OriginalFilename: REGEDIT.EXE.MUI
+              FileVersion:      10.0.17134.1363 (WinBuild.160101.0800)
+              FileDescription:  Editor del Registro
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17134.1363
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamaño      : 336384
+
+Name        : splwow64.exe
+VersionInfo : File:             C:\Windows\splwow64.exe
+              InternalName:     splwow64.exe
+              OriginalFilename: splwow64.exe
+              FileVersion:      10.0.17134.1130 (WinBuild.160101.0800)
+              FileDescription:  Print driver host for applications
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   10.0.17134.1130
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+Tamaño      : 131072
+
+Name        : winhlp32.exe
+VersionInfo : File:             C:\Windows\winhlp32.exe
+              InternalName:     WINHSTB
+              OriginalFilename: WINHLP32.EXE.MUI
+              FileVersion:      10.0.17134.1 (WinBuild.160101.0800)
+              FileDescription:  Código auxiliar de Windows Winhlp32
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17134.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamaño      : 11776
+
+Name        : write.exe
+VersionInfo : File:             C:\Windows\write.exe
+              InternalName:     write
+              OriginalFilename: write
+              FileVersion:      10.0.17134.1 (WinBuild.160101.0800)
+              FileDescription:  Windows Write
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   10.0.17134.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+Tamaño      : 11264
+
+
+
+PS C:\WINDOWS\system32> Get-NetAdapter | where -Filter {$_.Virtual -eq $false}|fl
+
+
+Name                       : Wi-Fi
+InterfaceDescription       : Intel(R) Dual Band Wireless-AC 3160
+InterfaceIndex             : 34
+MacAddress                 : 34-DE-1A-CC-59-66
+MediaType                  : Native 802.11
+PhysicalMediaType          : Native 802.11
+InterfaceOperationalStatus : Up
+AdminStatus                : Up
+LinkSpeed(Mbps)            : 150
+MediaConnectionState       : Connected
+ConnectorPresent           : True
+DriverInformation          : Driver Date 2018-04-29 Version 18.33.13.4 NDIS 6.40
+
+Name                       : Ethernet
+InterfaceDescription       : Realtek PCIe GBE Family Controller
+InterfaceIndex             : 12
+MacAddress                 : 50-7B-9D-8C-0F-60
+MediaType                  : 802.3
+PhysicalMediaType          : 802.3
+InterfaceOperationalStatus : Down
+AdminStatus                : Up
+LinkSpeed(Mbps)            : 0
+MediaConnectionState       : Disconnected
+ConnectorPresent           : True
+DriverInformation          : Driver Date 2015-05-05 Version 10.1.505.2015 NDIS 6.40
+
+
+
+PS C:\WINDOWS\system32> Get-DnsClientCache | where -filter {$_.Type -eq 1 -or $_.Tupe -eq 28}|fl
+
+
+Entry      : safebrowsing.googleapis.com
+RecordName : safebrowsing.googleapis.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 96
+DataLength : 4
+Data       : 172.217.1.106
+
+Entry      : zoomva3215162mmr.zoom.us
+RecordName : zoomva3215162mmr.zoom.us
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 17642
+DataLength : 4
+Data       : 3.21.51.62
+
+Entry      : ssl.gstatic.com
+RecordName : ssl.gstatic.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 166
+DataLength : 4
+Data       : 172.217.28.99
+
+Entry      : signaler-pa.clients6.google.com
+RecordName : signaler-pa.clients6.google.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 194
+DataLength : 4
+Data       : 172.217.30.202
+
+Entry      : www.icesi.edu.co
+RecordName : webcache.icesi.edu.co
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 13463
+DataLength : 4
+Data       : 200.3.192.46
+
+Entry      : cdn.memegenerator.es
+RecordName : cdn.memegenerator.es
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 5129
+DataLength : 4
+Data       : 5.196.83.231
+
+Entry      : localhost
+RecordName : localhost
+RecordType : A
+Status     : Success
+Section    :
+TimeToLive : 1200
+DataLength : 4
+Data       : 127.0.0.1
+
+Entry      : download.eclipse.org
+RecordName : download.eclipse.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 10262
+DataLength : 4
+Data       : 198.41.30.199
+
+
+
+PS C:\WINDOWS\system32> ls C:\Windows\System32 | where -filter {$_.Name -like '*.exe' -and $_.Length -gt 5*1MB} | ft Name,@{n='length (MB)';e={$_.length / 1MB -as [int]}}
+
+Name             length (MB)
+----             -----------
+MRT-KB890830.exe         127
+MRT.exe                  116
+mspaint.exe                6
+ntoskrnl.exe               9
+
+
+PS C:\WINDOWS\system32> Get-HotFix | where -Filter {$_.Description -eq 'Security Update'}|fl
+
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4465663
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/11/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4477137
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/12/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4485449
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 13/02/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4497398
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 16/05/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4509094
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/07/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4512576
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 11/09/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4516115
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 11/09/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4521861
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 10/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4523203
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 13/11/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4524244
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 12/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4537759
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 12/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4537762
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 13/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+
+PS C:\WINDOWS\system32> Get-HotFix | where -filter {$_.Description -eq 'Update' -and $_.InstalledBy -eq 'NT AUTHORITY\SYSTEM'}|FL
+
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4534130
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 13/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4343669
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 10/07/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4346084
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 20/04/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4456655
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 12/09/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4486161
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 17/09/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+
+PS C:\WINDOWS\system32> Get-Process | where -filter {$_.Name -eq 'Conhost' -or $_.Name -eq 'Svchost'}|fl
+
+
+Id      : 3184
+Handles : 116
+CPU     : 0,015625
+SI      : 0
+Name    : conhost
+
+Id      : 472
+Handles : 1136
+CPU     : 186,09375
+SI      : 0
+Name    : svchost
+
+Id      : 540
+Handles : 275
+CPU     : 12,90625
+SI      : 0
+Name    : svchost
+
+Id      : 660
+Handles : 342
+CPU     : 2,890625
+SI      : 0
+Name    : svchost
+
+Id      : 736
+Handles : 149
+CPU     : 27,859375
+SI      : 0
+Name    : svchost
+
+Id      : 936
+Handles : 84
+CPU     : 0,03125
+SI      : 0
+Name    : svchost
+
+Id      : 964
+Handles : 975
+CPU     : 228,484375
+SI      : 0
+Name    : svchost
+
+Id      : 1136
+Handles : 188
+CPU     : 2,015625
+SI      : 0
+Name    : svchost
+
+Id      : 1308
+Handles : 450
+CPU     : 636,25
+SI      : 0
+Name    : svchost
+
+Id      : 1312
+Handles : 215
+CPU     : 34,875
+SI      : 0
+Name    : svchost
+
+Id      : 1344
+Handles : 232
+CPU     : 2,9375
+SI      : 0
+Name    : svchost
+
+Id      : 1380
+Handles : 242
+CPU     : 0,78125
+SI      : 0
+Name    : svchost
+
+Id      : 1396
+Handles : 165
+CPU     : 1,984375
+SI      : 0
+Name    : svchost
+
+Id      : 1408
+Handles : 149
+CPU     : 0,78125
+SI      : 0
+Name    : svchost
+
+Id      : 1420
+Handles : 378
+CPU     : 26,46875
+SI      : 0
+Name    : svchost
+
+Id      : 1428
+Handles : 275
+CPU     : 7,453125
+SI      : 0
+Name    : svchost
+
+Id      : 1476
+Handles : 472
+CPU     : 111,203125
+SI      : 0
+Name    : svchost
+
+Id      : 1560
+Handles : 433
+CPU     : 30,140625
+SI      : 0
+Name    : svchost
+
+Id      : 1648
+Handles : 213
+CPU     : 2,625
+SI      : 0
+Name    : svchost
+
+Id      : 1664
+Handles : 456
+CPU     : 20,328125
+SI      : 0
+Name    : svchost
+
+Id      : 1836
+Handles : 179
+CPU     : 0,796875
+SI      : 0
+Name    : svchost
+
+Id      : 1932
+Handles : 261
+CPU     : 13,984375
+SI      : 0
+Name    : svchost
+
+Id      : 1940
+Handles : 142
+CPU     : 19,203125
+SI      : 0
+Name    : svchost
+
+Id      : 1944
+Handles : 166
+CPU     : 6,5625
+SI      : 0
+Name    : svchost
+
+Id      : 1960
+Handles : 204
+CPU     : 0,65625
+SI      : 0
+Name    : svchost
+
+Id      : 2020
+Handles : 164
+CPU     : 3,625
+SI      : 0
+Name    : svchost
+
+Id      : 2032
+Handles : 150
+CPU     : 2,65625
+SI      : 0
+Name    : svchost
+
+Id      : 2120
+Handles : 124
+CPU     : 12,28125
+SI      : 0
+Name    : svchost
+
+Id      : 2196
+Handles : 1115
+CPU     : 938,265625
+SI      : 0
+Name    : svchost
+
+Id      : 2212
+Handles : 388
+CPU     : 210,734375
+SI      : 0
+Name    : svchost
+
+Id      : 2252
+Handles : 431
+CPU     : 150,3125
+SI      : 0
+Name    : svchost
+
+Id      : 2308
+Handles : 303
+CPU     : 5,234375
+SI      : 0
+Name    : svchost
+
+Id      : 2332
+Handles : 247
+CPU     : 1,5
+SI      : 0
+Name    : svchost
+
+Id      : 2416
+Handles : 461
+CPU     : 63
+SI      : 0
+Name    : svchost
+
+Id      : 2436
+Handles : 260
+CPU     : 22,0625
+SI      : 0
+Name    : svchost
+
+Id      : 2504
+Handles : 271
+CPU     : 90,921875
+SI      : 0
+Name    : svchost
+
+Id      : 2648
+Handles : 225
+CPU     : 77,796875
+SI      : 0
+Name    : svchost
+
+Id      : 2652
+Handles : 464
+CPU     : 20,578125
+SI      : 0
+Name    : svchost
+
+Id      : 2664
+Handles : 144
+CPU     : 4,234375
+SI      : 0
+Name    : svchost
+
+Id      : 2776
+Handles : 259
+CPU     : 0,734375
+SI      : 0
+Name    : svchost
+
+Id      : 2848
+Handles : 386
+CPU     : 1,328125
+SI      : 0
+Name    : svchost
+
+Id      : 3032
+Handles : 647
+CPU     : 56,875
+SI      : 0
+Name    : svchost
+
+Id      : 3084
+Handles : 181
+CPU     : 3,0625
+SI      : 0
+Name    : svchost
+
+Id      : 3360
+Handles : 389
+CPU     : 8,390625
+SI      : 0
+Name    : svchost
+
+Id      : 3368
+Handles : 378
+CPU     : 434,5
+SI      : 0
+Name    : svchost
+
+Id      : 3376
+Handles : 238
+CPU     : 45,921875
+SI      : 0
+Name    : svchost
+
+Id      : 3384
+Handles : 210
+CPU     : 5,515625
+SI      : 0
+Name    : svchost
+
+Id      : 3396
+Handles : 281
+CPU     : 27,96875
+SI      : 0
+Name    : svchost
+
+Id      : 3404
+Handles : 464
+CPU     : 27,78125
+SI      : 0
+Name    : svchost
+
+Id      : 3416
+Handles : 125
+CPU     : 0,046875
+SI      : 0
+Name    : svchost
+
+Id      : 3424
+Handles : 139
+CPU     : 0,046875
+SI      : 0
+Name    : svchost
+
+Id      : 3632
+Handles : 196
+CPU     : 0,625
+SI      : 0
+Name    : svchost
+
+Id      : 3668
+Handles : 112
+CPU     : 2,71875
+SI      : 0
+Name    : svchost
+
+Id      : 3924
+Handles : 103
+CPU     : 0,25
+SI      : 0
+Name    : svchost
+
+Id      : 3992
+Handles : 202
+CPU     : 4,5625
+SI      : 0
+Name    : svchost
+
+Id      : 5344
+Handles : 156
+CPU     : 0,328125
+SI      : 0
+Name    : svchost
+
+Id      : 5528
+Handles : 305
+CPU     : 14,171875
+SI      : 21
+Name    : svchost
+
+Id      : 5664
+Handles : 335
+CPU     : 20,828125
+SI      : 0
+Name    : svchost
+
+Id      : 5724
+Handles : 124
+CPU     : 0,34375
+SI      : 0
+Name    : svchost
+
+Id      : 5796
+Handles : 121
+CPU     : 0,359375
+SI      : 0
+Name    : svchost
+
+Id      : 5976
+Handles : 329
+CPU     : 26,109375
+SI      : 0
+Name    : svchost
+
+Id      : 5984
+Handles : 290
+CPU     : 64,6875
+SI      : 0
+Name    : svchost
+
+Id      : 6100
+Handles : 224
+CPU     : 2,890625
+SI      : 0
+Name    : svchost
+
+Id      : 6352
+Handles : 354
+CPU     : 133,921875
+SI      : 0
+Name    : svchost
+
+Id      : 6620
+Handles : 231
+CPU     : 0,078125
+SI      : 0
+Name    : svchost
+
+Id      : 7044
+Handles : 185
+CPU     : 0,234375
+SI      : 0
+Name    : svchost
+
+Id      : 7068
+Handles : 479
+CPU     : 32,765625
+SI      : 0
+Name    : svchost
+
+Id      : 7236
+Handles : 193
+CPU     : 0,796875
+SI      : 0
+Name    : svchost
+
+Id      : 7716
+Handles : 234
+CPU     : 150,734375
+SI      : 0
+Name    : svchost
+
+Id      : 8020
+Handles : 168
+CPU     : 2,859375
+SI      : 0
+Name    : svchost
+
+Id      : 8184
+Handles : 200
+CPU     : 2,515625
+SI      : 0
+Name    : svchost
+
+Id      : 8984
+Handles : 234
+CPU     : 0,203125
+SI      : 21
+Name    : svchost
+
+Id      : 9416
+Handles : 246
+CPU     : 4,9375
+SI      : 0
+Name    : svchost
+
+Id      : 11144
+Handles : 154
+CPU     : 0,0625
+SI      : 0
+Name    : svchost
+
+Id      : 11172
+Handles : 482
+CPU     : 4,34375
+SI      : 21
+Name    : svchost
+
+
+
+PS C:\WINDOWS\system32> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200325173713
+**********************
