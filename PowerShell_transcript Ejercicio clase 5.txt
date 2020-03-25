@@ -1,0 +1,611 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200325175009
+Nombre de usuario: DESKTOP-SOUHA69\jeffe
+Usuario RunAs: DESKTOP-SOUHA69\jeffe
+Nombre de la configuración: 
+Máquina: DESKTOP-SOUHA69 (Microsoft Windows NT 10.0.17134.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 8852
+PSVersion: 5.1.17134.858
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.858
+BuildVersion: 10.0.17134.858
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\jeffe\OneDrive\Documentos\PowerShell_transcript.DESKTOP-SOUHA69.7GfFGhL4.20200325175009.txt
+PS C:\WINDOWS\system32> Get-CimInstance win32_networkadapterConfiguration | Select
+
+ServiceName      DHCPEnabled                       Index                             Description
+-----------      -----------                       -----                             -----------
+kdnic            True                              0                                 Microsoft Kernel Debug Networ...
+NETwNb64         True                              1                                 Intel(R) Dual Band Wireless-A...
+rt640x64         True                              2                                 Realtek PCIe GBE Family Contr...
+vwifimp          True                              3                                 Microsoft Wi-Fi Direct Virtua...
+vwifimp          True                              4                                 Microsoft Wi-Fi Direct Virtua...
+RasSstp          False                             5                                 WAN Miniport (SSTP)
+RasAgileVpn      False                             6                                 WAN Miniport (IKEv2)
+Rasl2tp          False                             7                                 WAN Miniport (L2TP)
+PptpMiniport     False                             8                                 WAN Miniport (PPTP)
+RasPppoe         False                             9                                 WAN Miniport (PPPOE)
+NdisWan          False                             10                                WAN Miniport (IP)
+NdisWan          False                             11                                WAN Miniport (IPv6)
+NdisWan          False                             12                                WAN Miniport (Network Monitor)
+RtlWlanu_OldIC   True                              13                                300Mbps Wireless High Power U...
+vwifimp          True                              14                                Microsoft Wi-Fi Direct Virtua...
+vwifimp          True                              15                                Microsoft Wi-Fi Direct Virtua...
+Neo.Service.Name True                              16                                VPN Client Adapter - VPN
+RFCOMM           False                             17                                Bluetooth Device (RFCOMM Prot...
+BthPan           True                              18                                Bluetooth Device (Personal Ar...
+AsyncMac         False                             19                                RAS Async Adapter
+qcusbwwan        False                             20                                Qualcomm HS-USB WWAN Adapter ...
+usbrndis6        True                              21                                Remote NDIS based Internet Sh...
+usbrndis6        True                              22                                Remote NDIS based Internet Sh...
+usbrndis6        True                              23                                Remote NDIS based Internet Sh...
+usbrndis6        True                              24                                Remote NDIS based Internet Sh...
+usbrndis6        True                              25                                Remote NDIS based Internet Sh...
+usbrndis6        True                              26                                Remote NDIS based Internet Sh...
+usbrndis6        True                              27                                Remote NDIS based Internet Sh...
+usbrndis6        True                              28                                Remote NDIS based Internet Sh...
+
+
+PS C:\WINDOWS\system32> Get-CimInstance win32_networkadapterConfiguration | Select-Object Ip
+
+
+Description             : Microsoft Kernel Debug Network Adapter
+Index                   : 0
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Intel(R) Dual Band Wireless-AC 3160
+Index                   : 1
+IPAddress               : {192.168.0.10, fe80::4844:7f39:551a:c716}
+IPConnectionMetric      : 50
+IPEnabled               : True
+IPFilterSecurityEnabled : False
+
+Description             : Realtek PCIe GBE Family Controller
+Index                   : 2
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 3
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 4
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (SSTP)
+Index                   : 5
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IKEv2)
+Index                   : 6
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (L2TP)
+Index                   : 7
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPTP)
+Index                   : 8
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPPOE)
+Index                   : 9
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IP)
+Index                   : 10
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IPv6)
+Index                   : 11
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (Network Monitor)
+Index                   : 12
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : 300Mbps Wireless High Power USB Adapter
+Index                   : 13
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 14
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 15
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : VPN Client Adapter - VPN
+Index                   : 16
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Bluetooth Device (RFCOMM Protocol TDI)
+Index                   : 17
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Bluetooth Device (Personal Area Network)
+Index                   : 18
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : RAS Async Adapter
+Index                   : 19
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Qualcomm HS-USB WWAN Adapter 9092
+Index                   : 20
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 21
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 22
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 23
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 24
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 25
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 26
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 27
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Remote NDIS based Internet Sharing Device
+Index                   : 28
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+
+
+PS C:\WINDOWS\system32> Get-WmiObject Win32_quicixengineering
+Get-WmiObject : Clase no válida "Win32_quicixengineering"
+En línea: 1 Carácter: 1
++ Get-WmiObject Win32_quicixengineering
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+Get-WmiObject : Clase no válida "Win32_quicixengineering"
+En línea: 1 Carácter: 1
++ Get-WmiObject Win32_quicixengineering
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+
+PS C:\WINDOWS\system32> Get-WmiObject Win32_quikfixengineering
+Get-WmiObject : Clase no válida "Win32_quikfixengineering"
+En línea: 1 Carácter: 1
++ Get-WmiObject Win32_quikfixengineering
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+Get-WmiObject : Clase no válida "Win32_quikfixengineering"
+En línea: 1 Carácter: 1
++ Get-WmiObject Win32_quikfixengineering
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+
+PS C:\WINDOWS\system32> Get-WmiObject Win32_quickfixengineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-SO... Update           KB4534130     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-SO... Update           KB4343669     NT AUTHORITY\SYSTEM  10/07/2018 12:00:00 a. m.
+DESKTOP-SO... Update           KB4346084     NT AUTHORITY\SYSTEM  20/04/2019 12:00:00 a. m.
+DESKTOP-SO... Update           KB4456655     NT AUTHORITY\SYSTEM  12/09/2018 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4465663     NT AUTHORITY\SYSTEM  14/11/2018 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4477137     NT AUTHORITY\SYSTEM  14/12/2018 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4485449     NT AUTHORITY\SYSTEM  13/02/2019 12:00:00 a. m.
+DESKTOP-SO... Update           KB4486153     DESKTOP-SOUHA69\j... 30/08/2019 12:00:00 a. m.
+DESKTOP-SO... Update           KB4486161     NT AUTHORITY\SYSTEM  17/09/2019 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4497398     NT AUTHORITY\SYSTEM  16/05/2019 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4509094     NT AUTHORITY\SYSTEM  14/07/2019 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4512576     NT AUTHORITY\SYSTEM  11/09/2019 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4516115     NT AUTHORITY\SYSTEM  11/09/2019 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4521861     NT AUTHORITY\SYSTEM  10/10/2019 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4523203     NT AUTHORITY\SYSTEM  13/11/2019 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4524244     NT AUTHORITY\SYSTEM  12/02/2020 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4537759     NT AUTHORITY\SYSTEM  12/02/2020 12:00:00 a. m.
+DESKTOP-SO... Security Update  KB4537762     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+
+
+PS C:\WINDOWS\system32> Get-WmiObject win32_service | Select-Object status, startmode, systemname
+
+status startmode systemname
+------ --------- ----------
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Disabled  DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Manual    DESKTOP-SOUHA69
+OK     Auto      DESKTOP-SOUHA69
+
+
+PS C:\WINDOWS\system32> get-cimClass -Namespace root/SecurityCenter2 | where -Filter {$_.CimClassName -like "*product*"}
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathT...
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathT...
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathT...
+
+
+PS C:\WINDOWS\system32> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSPywareProduct |Select-Object displayName
+
+displayName
+-----------
+Windows Defender
+
+
+PS C:\WINDOWS\system32> Get-CimInstance -Namespace root/SecurityCenter2 ClassName AntiVirusProduct |Select-Object displayName
+>> ErrorTerminación(Get-CimInstance): "No se encuentra ningún parámetro de posición que acepte el argumento 'AntiVirusProduct'."
+Get-CimInstance : No se encuentra ningún parámetro de posición que acepte el argumento 'AntiVirusProduct'.
+En línea: 1 Carácter: 1
++ Get-CimInstance -Namespace root/SecurityCenter2 ClassName AntiVirusPr ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-CimInstance], ParameterBindingException
+    + FullyQualifiedErrorId : 
+PositionalParameterNotFound,Microsoft.Management.Infrastructure.CimCmdlets.GetCimInstanceCommand
+Get-CimInstance : No se encuentra ningún parámetro de posición que acepte el argumento 'AntiVirusProduct'.
+En línea: 1 Carácter: 1
++ Get-CimInstance -Namespace root/SecurityCenter2 ClassName AntiVirusPr ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-CimInstance], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.Management.Infrastructure.CimCmdlets.GetCimInsta
+   nceCommand
+
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200325183804
+**********************
